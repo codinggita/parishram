@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#3323cc",
+                        "surface-container-low": "#f3f3fe",
+                        "outline-variant": "#c3c6d7",
+                        "inverse-on-surface": "#f0f0fb",
+                        "inverse-surface": "#2e3039",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "on-primary-container": "#eeefff",
+                        "on-tertiary-fixed-variant": "#7d2d00",
+                        "tertiary": "#943700",
+                        "surface-container-highest": "#e1e2ed",
+                        "on-primary": "#ffffff",
+                        "primary": "#004ac6",
+                        "secondary-fixed-dim": "#c3c0ff",
+                        "on-tertiary-fixed": "#360f00",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "on-secondary": "#ffffff",
+                        "surface": "#faf8ff",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-container": "#2563eb",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#e7e7f3",
+                        "surface-variant": "#e1e2ed",
+                        "surface-dim": "#d9d9e5",
+                        "on-secondary-fixed": "#0f0069",
+                        "on-surface": "#191b23",
+                        "on-background": "#191b23",
+                        "secondary-container": "#645efb",
+                        "on-primary-fixed": "#00174b",
+                        "on-secondary-container": "#fffbff",
+                        "on-error-container": "#93000a",
+                        "background": "#faf8ff",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "tertiary-container": "#bc4800",
+                        "outline": "#737686",
+                        "inverse-primary": "#b4c5ff",
+                        "on-tertiary-container": "#ffede6",
+                        "surface-container": "#ededf9",
+                        "surface-tint": "#0053db",
+                        "surface-bright": "#faf8ff",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#dbe1ff",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed": "#e2dfff",
+                        "tertiary-fixed": "#ffdbcd",
+                        "secondary": "#4b41e1",
+                        "on-surface-variant": "#434655"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "lg": "48px",
+                        "xl": "80px",
+                        "gutter": "24px",
+                        "xs": "4px",
+                        "base": "8px",
+                        "sm": "12px",
+                        "md": "24px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "h2": ["Inter"],
+                        "h1": ["Inter"],
+                        "button": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "h3": ["Inter"]
+                    },
+                    "fontSize": {
+                        "h2": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "h1": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "button": ["16px", {"lineHeight": "1", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "label-sm": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400"}],
+                        "h3": ["24px", {"lineHeight": "1.4", "letterSpacing": "0em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .ambient-shadow {
+            box-shadow: 0 4px 20px rgba(37, 99, 235, 0.04);
+        }
+        .ambient-shadow-lg {
+            box-shadow: 0 12px 40px rgba(37, 99, 235, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 border-b bg-white/70 backdrop-blur-lg border-white/10 shadow-sm h-16">
+<div class="flex justify-between items-center px-8 h-full w-full max-w-7xl mx-auto">
+<div class="text-xl font-bold tracking-tight text-blue-600">EduAspirant</div>
+<div class="hidden md:flex items-center gap-8 font-inter text-sm font-medium">
+<a class="text-blue-600 font-bold border-b-2 border-blue-600 pb-1" href="#">Courses</a>
+<a class="text-slate-600 hover:text-blue-500 transition-colors" href="#">Practice</a>
+<a class="text-slate-600 hover:text-blue-500 transition-colors" href="#">Test Series</a>
+<a class="text-slate-600 hover:text-blue-500 transition-colors" href="#">Resources</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-slate-600 font-button text-button hover:text-blue-500 transition-colors">Login</button>
+<button class="bg-primary-container text-on-primary px-6 py-2.5 rounded-lg font-button text-button active:scale-95 duration-200">Get Started</button>
+</div>
+</div>
+</nav>
+<main class="pt-16">
+<!-- Hero Section -->
+<section class="relative overflow-hidden py-xl md:py-[120px]">
+<div class="absolute inset-0 z-0 overflow-hidden">
+<div class="absolute -top-[10%] -left-[5%] w-[40%] h-[60%] rounded-full bg-primary/5 blur-[120px]"></div>
+<div class="absolute top-[20%] -right-[5%] w-[30%] h-[50%] rounded-full bg-secondary/5 blur-[100px]"></div>
+</div>
+<div class="max-w-7xl mx-auto px-8 relative z-10 grid grid-cols-12 gap-gutter items-center">
+<div class="col-span-12 lg:col-span-7">
+<span class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm mb-md">
+                        Trusted by 50,000+ Students Across India
+                    </span>
+<h1 class="font-h1 text-h1 text-on-surface mb-md leading-tight">
+                        Smart &amp; Affordable Prep for <span class="text-primary">NEET &amp; JEE</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg max-w-xl">
+                        Experience the most effective path to medical and engineering excellence. Personalized learning, expert-led sessions, and real-time analytics designed for the modern aspirant.
+                    </p>
+<div class="flex flex-wrap gap-md">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-lg font-button text-button ambient-shadow-lg active:scale-95 duration-200">Start Free Trial</button>
+<button class="border border-secondary text-secondary px-8 py-4 rounded-lg font-button text-button hover:bg-secondary/5 active:scale-95 duration-200">Watch Demo</button>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-5 relative mt-xl lg:mt-0">
+<div class="glass-card p-4 rounded-xl ambient-shadow-lg relative z-10">
+<img alt="Student studying" class="rounded-lg w-full h-[400px] object-cover" data-alt="Modern high-resolution photo of a focused female student studying with a digital tablet and notebook in a bright, minimalist modern library" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1E3l62gn6ms_du-qVuMe-Jlu9FH-ZW1eDIYZ8jMKsjkyJU06620mTXHomgStxTFfxiwlkIntowjUs5nx2ZYtSshCXCGdtnTMZZdaOILci5uwKmrqV_hF61ZRB8QldTxL20rbdOd-nFlT_wmnHhMw3JZwi98_k1o8QYzyx0uaC8iUZLk_rJXdi6kwVhbvMOMAcz4-NrjcHxY8-naNQCY6s8-yqr44iuDpRmUhNy3CTFr_WLCDcAycSJ0vHiA7dnh1BvkYV0Cj24A"/>
+<div class="absolute -bottom-6 -left-6 glass-card p-md rounded-xl ambient-shadow flex items-center gap-sm">
+<div class="w-12 h-12 bg-green-100 text-green-600 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface">Daily Progress</div>
+<div class="text-xs text-on-surface-variant">85% Syllabus Completed</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Feature Bento Grid -->
+<section class="py-xl bg-surface-container-low/50">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-xl">
+<h2 class="font-h2 text-h2 text-on-surface mb-sm">Everything you need to excel</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
+                        Powerful tools integrated into a single seamless platform to maximize your study efficiency.
+                    </p>
+</div>
+<div class="grid grid-cols-12 gap-gutter h-auto lg:h-[500px]">
+<!-- Large Feature: Analytics -->
+<div class="col-span-12 lg:col-span-7 glass-card p-md rounded-xl ambient-shadow flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center mb-md">
+<span class="material-symbols-outlined">analytics</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface mb-sm">Deep Performance Analytics</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+                                Our AI-driven engine identifies your weak spots and suggests targeted practice sets to boost your score efficiently.
+                            </p>
+</div>
+<div class="mt-lg">
+<img alt="Analytics Dashboard" class="w-full h-48 object-cover rounded-lg border border-outline-variant" data-alt="Clean minimalist UI dashboard showing colorful bar charts and growth progress graphs with high contrast and blue accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoZYnIkk3pgXo8ceciMf4dbCFopqYrd-F5BctJI-ge3gdAkPnUWTsfsGymvG2gxWXWiO_3Ma63MprCs_Z1DPmNuUNLV4uRtMpCJ-a0kOpLAkZW7znhCLRqZ-Q6WnuMf_R7nxT_Ta64YGRTh4q8G76yYNXamtdJ9ruWwDfdIrVJ1yO6m_OHoP74fr8VERWndNVAzhuVOENuyynhpwvAaXWUMTrGYhzhPcizM0TlHJhT_jiKwLHRtO9_CV7BBruBS4IR_ZrcoYuSHQ"/>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-5 grid grid-rows-2 gap-gutter">
+<!-- Small Feature: Mock Tests -->
+<div class="glass-card p-md rounded-xl ambient-shadow flex items-start gap-md">
+<div class="w-12 h-12 shrink-0 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined">assignment</span>
+</div>
+<div>
+<h3 class="font-button text-button text-on-surface mb-xs">Mock Tests</h3>
+<p class="text-sm text-on-surface-variant">1,000+ full-length mock tests mapped to the latest exam patterns for real-time exam feel.</p>
+</div>
+</div>
+<!-- Small Feature: Doubt Solving -->
+<div class="glass-card p-md rounded-xl ambient-shadow flex items-start gap-md">
+<div class="w-12 h-12 shrink-0 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined">forum</span>
+</div>
+<div>
+<h3 class="font-button text-button text-on-surface mb-xs">24/7 Doubt Solving</h3>
+<p class="text-sm text-on-surface-variant">Connect with subject experts instantly via chat or video to clear your concepts anytime.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Student Success Section -->
+<section class="py-xl overflow-hidden">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-xl gap-md">
+<div class="max-w-xl">
+<h2 class="font-h2 text-h2 text-on-surface mb-sm">Student Success Stories</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Hear from those who turned their aspirations into reality with EduAspirant.</p>
+</div>
+<button class="flex items-center gap-xs text-primary font-button text-button hover:underline">
+                        View All Success Stories <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-12 gap-gutter">
+<!-- Testimonial 1 -->
+<div class="col-span-12 md:col-span-4 bg-white p-md rounded-xl ambient-shadow border border-slate-100">
+<div class="flex gap-1 text-orange-400 mb-md">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mb-lg italic">
+                            "The analytics tool was a game-changer. I realized I was spending too much time on organic chemistry and shifted focus just in time for NEET."
+                        </p>
+<div class="flex items-center gap-md">
+<img alt="Priyal S." class="w-12 h-12 rounded-full object-cover" data-alt="Portrait of a smiling young Indian woman with short dark hair in a casual professional setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmLPsXc3i5J0zetmzm3FdL90Y2qJMELFjvC_V-PKvuA8VrcHQwXWW9aOgnRZNLPw4iHP6V-GsqnAawmtGHOW6P-qgQeBTPjpd_W5kNnh8O5pFWQ7-SQU_-YUGVdAXjqJfpPeajIHR_wox3d0tNIvgP6lAbniRNFCfqOErZfCjwqwAKhtNMP5BpYTDeeRwlp4snlm8k3n4NInqjWp2J_39-3WRnDAeaPgGGUlnxDrupsAWpEWq-XGaJj1BPvsAsKKPpNU0jtPNVRQ"/>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface">Priyal Sharma</div>
+<div class="text-xs text-on-surface-variant">AIR 456, NEET 2024</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="col-span-12 md:col-span-4 bg-white p-md rounded-xl ambient-shadow border border-slate-100">
+<div class="flex gap-1 text-orange-400 mb-md">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mb-lg italic">
+                            "The practice sets for JEE Physics are unmatched. The quality of questions is exactly what you see in the actual examination."
+                        </p>
+<div class="flex items-center gap-md">
+<img alt="Rahul M." class="w-12 h-12 rounded-full object-cover" data-alt="Portrait of a young man with a friendly smile, glasses, wearing a simple blue polo shirt" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmRWDQ5N-AEiT7i7yr-UuWWmmZIpIIzje0E8XFktzxwX1t_0nipsFNwDFQZUXwYmN6PqSCZ-Hsot5QEkuBCP4kD_ddjHX6vDNrd_uBg8elfzyov783wlBZyrvWv2Erlxx2ksvEbOQx4YlbIJ82TvyKGIom9OGh2TxGkUmiaGSTEXjhuHjI2KKolpo0HUsiCyMkPLRDB3XKt2ggytCbVF8gg3feu7EpTUkLggUmC_h_gJHMSEYWfMWmSga16En9E4mS0mrspHlYng"/>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface">Rahul Mehta</div>
+<div class="text-xs text-on-surface-variant">IIT Bombay, Batch of 2028</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="col-span-12 md:col-span-4 bg-white p-md rounded-xl ambient-shadow border border-slate-100">
+<div class="flex gap-1 text-orange-400 mb-md">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface mb-lg italic">
+                            "24/7 doubt solving meant I never got stuck. I could study late at night and still get my questions answered within minutes."
+                        </p>
+<div class="flex items-center gap-md">
+<img alt="Ananya K." class="w-12 h-12 rounded-full object-cover" data-alt="Close up portrait of a young woman with a warm friendly expression and long dark hair" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-aK17XHxtBvmapIOu6CbmO81iVC3WpQbib6Y_PiD8mCx3Hu_RbnccjuFa91HStGe2I6iBy05_2o7gSjWtSN4FuOjZHpcdBs_oIsPcgUlyIO3XWVk5FK25O2nBgaHDbkKzg2_weetGKxBj5m1ZRebRXgbNWBYY2mmOtmMwENAez7vhZWU64zhZ58moPz02IKWD5x-lNjdWQqyyL_K6kFe68rW1fUK79yIoH2bvWOnMwcRfoTGfhbgb66mnBXQW3Dmm5VEmnlILTA"/>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface">Ananya Kapoor</div>
+<div class="text-xs text-on-surface-variant">CMC Vellore, NEET 2024</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="py-xl">
+<div class="max-w-5xl mx-auto px-8">
+<div class="relative rounded-3xl overflow-hidden bg-primary px-12 py-16 text-center text-on-primary">
+<div class="absolute inset-0 z-0">
+<div class="absolute top-0 right-0 w-[50%] h-[100%] bg-white/10 skew-x-[-20deg] blur-2xl"></div>
+</div>
+<div class="relative z-10">
+<h2 class="font-h2 text-h2 mb-md">Start your journey to excellence today</h2>
+<p class="font-body-lg text-body-lg mb-xl text-primary-fixed max-w-2xl mx-auto">
+                            Join thousands of successful aspirants. Get full access to courses, practice papers, and analytics for 7 days—no credit card required.
+                        </p>
+<div class="flex justify-center gap-md">
+<button class="bg-white text-primary px-8 py-4 rounded-lg font-button text-button ambient-shadow active:scale-95 duration-200">Start Free Trial</button>
+<button class="bg-primary-container border border-white/20 text-white px-8 py-4 rounded-lg font-button text-button hover:bg-white/10 active:scale-95 duration-200">Talk to Expert</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t bg-slate-50 border-slate-200">
+<div class="flex flex-col md:flex-row justify-between items-center py-10 px-8 max-w-7xl mx-auto gap-4">
+<div class="flex flex-col items-center md:items-start gap-2">
+<div class="text-blue-600 font-bold text-lg">EduAspirant</div>
+<p class="font-inter text-xs text-slate-500">© 2024 EduAspirant. Empowering India's future specialists.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-inter text-xs text-slate-500 hover:text-blue-500 hover:underline underline-offset-4 transition-opacity duration-300" href="#">About</a>
+<a class="font-inter text-xs text-slate-500 hover:text-blue-500 hover:underline underline-offset-4 transition-opacity duration-300" href="#">Privacy</a>
+<a class="font-inter text-xs text-slate-500 hover:text-blue-500 hover:underline underline-offset-4 transition-opacity duration-300" href="#">Terms</a>
+<a class="font-inter text-xs text-slate-500 hover:text-blue-500 hover:underline underline-offset-4 transition-opacity duration-300" href="#">Support</a>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-primary">language</span>
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-primary">share</span>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#3323cc",
+                        "surface-container-low": "#f3f3fe",
+                        "outline-variant": "#c3c6d7",
+                        "inverse-on-surface": "#f0f0fb",
+                        "inverse-surface": "#2e3039",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "on-primary-container": "#eeefff",
+                        "on-tertiary-fixed-variant": "#7d2d00",
+                        "tertiary": "#943700",
+                        "surface-container-highest": "#e1e2ed",
+                        "on-primary": "#ffffff",
+                        "primary": "#004ac6",
+                        "secondary-fixed-dim": "#c3c0ff",
+                        "on-tertiary-fixed": "#360f00",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "on-secondary": "#ffffff",
+                        "surface": "#faf8ff",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-container": "#2563eb",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#e7e7f3",
+                        "surface-variant": "#e1e2ed",
+                        "surface-dim": "#d9d9e5",
+                        "on-secondary-fixed": "#0f0069",
+                        "on-surface": "#191b23",
+                        "on-background": "#191b23",
+                        "secondary-container": "#645efb",
+                        "on-primary-fixed": "#00174b",
+                        "on-secondary-container": "#fffbff",
+                        "on-error-container": "#93000a",
+                        "background": "#faf8ff",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "tertiary-container": "#bc4800",
+                        "outline": "#737686",
+                        "inverse-primary": "#b4c5ff",
+                        "on-tertiary-container": "#ffede6",
+                        "surface-container": "#ededf9",
+                        "surface-tint": "#0053db",
+                        "surface-bright": "#faf8ff",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#dbe1ff",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed": "#e2dfff",
+                        "tertiary-fixed": "#ffdbcd",
+                        "secondary": "#4b41e1",
+                        "on-surface-variant": "#434655"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "lg": "48px",
+                        "xl": "80px",
+                        "gutter": "24px",
+                        "xs": "4px",
+                        "base": "8px",
+                        "sm": "12px",
+                        "md": "24px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "h2": ["Inter"],
+                        "h1": ["Inter"],
+                        "button": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "h3": ["Inter"]
+                    },
+                    "fontSize": {
+                        "h2": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "h1": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "button": ["16px", {"lineHeight": "1", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "label-sm": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400"}],
+                        "h3": ["24px", {"lineHeight": "1.4", "letterSpacing": "0em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .custom-shadow {
+            box-shadow: 0 4px 20px rgba(37, 99, 235, 0.04);
+        }
+        body {
+            background-color: #faf8ff;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface antialiased overflow-hidden">
+<!-- Top Navigation Bar (Shared Component Style Mapping) -->
+<header class="fixed top-0 w-full z-50 border-b border-white/10 glass-panel shadow-sm h-16 flex justify-between items-center px-8">
+<div class="flex items-center gap-8 max-w-7xl mx-auto w-full">
+<div class="text-xl font-bold tracking-tight text-blue-600">EduAspirant</div>
+<div class="h-6 w-px bg-outline-variant/30 hidden md:block"></div>
+<div class="hidden md:flex gap-6 items-center">
+<span class="text-label-sm font-medium text-on-surface-variant">NEET Full Syllabus Mock Test #12</span>
+</div>
+<div class="ml-auto flex items-center gap-4">
+<div class="flex items-center gap-2 px-4 py-1.5 bg-error-container/30 rounded-full border border-error/10">
+<span class="material-symbols-outlined text-error text-xl">timer</span>
+<span class="font-h3 text-error tracking-wider font-mono">02:45:18</span>
+</div>
+<button class="p-2 hover:bg-surface-container-high rounded-full transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant">settings</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-16 pb-20 h-screen flex">
+<!-- Question Section (Main Content Canvas) -->
+<section class="flex-1 overflow-y-auto px-8 py-10 flex flex-col items-center">
+<div class="w-full max-w-3xl">
+<!-- Breadcrumbs/Progress -->
+<div class="flex items-center gap-2 mb-8">
+<span class="px-3 py-1 bg-primary/10 text-primary font-semibold text-label-sm rounded-full">Biology</span>
+<span class="text-outline text-label-sm">Question 42 of 180</span>
+</div>
+<!-- Question Card -->
+<div class="bg-surface-container-lowest rounded-xl p-md custom-shadow mb-10">
+<h1 class="font-h3 text-on-surface mb-6">Which of the following hormones is responsible for the reabsorption of water from the distal convoluted tubule and collecting duct?</h1>
+<div class="aspect-video w-full rounded-lg bg-surface-container mb-6 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Scientific diagram showing human kidney anatomy and nephron structure with clear labeling in a clean instructional medical style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIq_51RvVoj7FoBkqxwgflJswOYnC1G5t0vWrBCnA1GUy081Msy2JvZkQBuPZU85qgn050_Pfwz4Y0WHiZpou2hNhz9jz3QXqAmjD0pNm-zUuOZiY4QN5usT5vk3-fgqgUfH4ge2rTv8Pn57LAyK-J0fGjyxOUukVEzPd2cGxtN5ki6ecvhBvr5haZwiBKvtEyhWssOi_HY-4H7Fr8fKN5UgwLrIxBzS5I-zvzF9dK78tUgdx-0N_2Yn0t1a3K7RaPomxFmIRroA"/>
+</div>
+</div>
+<!-- Options Grid -->
+<div class="grid grid-cols-1 gap-4 w-full">
+<!-- Option A -->
+<label class="group flex items-center p-5 bg-white border border-outline-variant hover:border-primary-container rounded-xl cursor-pointer transition-all duration-200 active:scale-[0.99] custom-shadow">
+<input class="hidden peer" name="question-opt" type="radio"/>
+<div class="w-10 h-10 rounded-lg bg-surface-container group-hover:bg-primary/10 flex items-center justify-center font-bold text-on-surface-variant group-hover:text-primary mr-4 transition-colors">A</div>
+<span class="font-body-lg flex-1">Oxytocin</span>
+<div class="w-6 h-6 rounded-full border-2 border-outline-variant peer-checked:border-primary peer-checked:bg-primary flex items-center justify-center transition-all">
+<div class="w-2 h-2 bg-white rounded-full opacity-0 peer-checked:opacity-100"></div>
+</div>
+</label>
+<!-- Option B -->
+<label class="group flex items-center p-5 bg-white border-2 border-primary-container rounded-xl cursor-pointer transition-all duration-200 active:scale-[0.99] custom-shadow">
+<input checked="" class="hidden peer" name="question-opt" type="radio"/>
+<div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center font-bold text-white mr-4 transition-colors">B</div>
+<span class="font-body-lg flex-1 text-on-surface">Antidiuretic Hormone (ADH)</span>
+<div class="w-6 h-6 rounded-full border-2 border-primary bg-primary flex items-center justify-center transition-all">
+<div class="w-2 h-2 bg-white rounded-full"></div>
+</div>
+</label>
+<!-- Option C -->
+<label class="group flex items-center p-5 bg-white border border-outline-variant hover:border-primary-container rounded-xl cursor-pointer transition-all duration-200 active:scale-[0.99] custom-shadow">
+<input class="hidden peer" name="question-opt" type="radio"/>
+<div class="w-10 h-10 rounded-lg bg-surface-container group-hover:bg-primary/10 flex items-center justify-center font-bold text-on-surface-variant group-hover:text-primary mr-4 transition-colors">C</div>
+<span class="font-body-lg flex-1">Aldosterone</span>
+<div class="w-6 h-6 rounded-full border-2 border-outline-variant peer-checked:border-primary peer-checked:bg-primary flex items-center justify-center transition-all">
+<div class="w-2 h-2 bg-white rounded-full opacity-0 peer-checked:opacity-100"></div>
+</div>
+</label>
+<!-- Option D -->
+<label class="group flex items-center p-5 bg-white border border-outline-variant hover:border-primary-container rounded-xl cursor-pointer transition-all duration-200 active:scale-[0.99] custom-shadow">
+<input class="hidden peer" name="question-opt" type="radio"/>
+<div class="w-10 h-10 rounded-lg bg-surface-container group-hover:bg-primary/10 flex items-center justify-center font-bold text-on-surface-variant group-hover:text-primary mr-4 transition-colors">D</div>
+<span class="font-body-lg flex-1">Thyroxine</span>
+<div class="w-6 h-6 rounded-full border-2 border-outline-variant peer-checked:border-primary peer-checked:bg-primary flex items-center justify-center transition-all">
+<div class="w-2 h-2 bg-white rounded-full opacity-0 peer-checked:opacity-100"></div>
+</div>
+</label>
+</div>
+</div>
+</section>
+<!-- Right Side Navigation Panel -->
+<aside class="w-80 bg-white border-l border-outline-variant/30 flex flex-col overflow-hidden">
+<div class="p-6 border-b border-outline-variant/20">
+<div class="flex items-center justify-between mb-6">
+<h2 class="font-h3 text-lg">Question Palette</h2>
+<button class="text-primary text-label-sm font-semibold hover:underline">View All</button>
+</div>
+<div class="grid grid-cols-5 gap-3">
+<!-- Nav Items: 1-20 placeholder grid -->
+<div class="w-10 h-10 flex items-center justify-center rounded-lg bg-tertiary-container text-white text-label-sm font-bold shadow-sm">41</div>
+<div class="w-10 h-10 flex items-center justify-center rounded-lg border-2 border-primary text-primary text-label-sm font-bold ring-2 ring-primary/20">42</div>
+<div class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container-high text-on-surface-variant text-label-sm font-bold">43</div>
+<div class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container-high text-on-surface-variant text-label-sm font-bold">44</div>
+<div class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container-high text-on-surface-variant text-label-sm font-bold">45</div>
+<!-- Row 2 -->
+<div class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container-high text-on-surface-variant text-label-sm font-bold">46</div>
+<div class="w-10 h-10 flex items-center justify-center rounded-lg bg-secondary-container text-white text-label-sm font-bold">47</div>
+<div class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container-high text-on-surface-variant text-label-sm font-bold">48</div>
+<div class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container-high text-on-surface-variant text-label-sm font-bold">49</div>
+<div class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container-high text-on-surface-variant text-label-sm font-bold">50</div>
+</div>
+</div>
+<div class="p-6 space-y-4 flex-1 overflow-y-auto">
+<div class="flex items-center gap-3 text-label-sm">
+<div class="w-3 h-3 rounded bg-tertiary-container"></div>
+<span class="text-on-surface-variant">Answered (1)</span>
+</div>
+<div class="flex items-center gap-3 text-label-sm">
+<div class="w-3 h-3 rounded bg-surface-container-high"></div>
+<span class="text-on-surface-variant">Not Visited (178)</span>
+</div>
+<div class="flex items-center gap-3 text-label-sm">
+<div class="w-3 h-3 rounded bg-secondary-container"></div>
+<span class="text-on-surface-variant">Marked for Review (1)</span>
+</div>
+</div>
+<div class="p-6 mt-auto bg-surface-container-low border-t border-outline-variant/30">
+<div class="p-4 bg-white rounded-lg border border-outline-variant/20 flex gap-3">
+<span class="material-symbols-outlined text-primary" data-weight="fill">lightbulb</span>
+<div>
+<p class="text-label-sm font-bold mb-0.5">Stuck?</p>
+<p class="text-[12px] leading-snug text-on-surface-variant">Reviewing renal system hormones in the study panel might help.</p>
+</div>
+</div>
+</div>
+</aside>
+</main>
+<!-- Sticky Footer Navigation -->
+<footer class="fixed bottom-0 w-full h-20 glass-panel border-t border-outline-variant/20 flex items-center px-8 z-50">
+<div class="max-w-7xl mx-auto w-full flex justify-between items-center">
+<div class="flex gap-4">
+<button class="px-6 py-2.5 rounded-lg border border-outline-variant text-on-surface-variant font-button hover:bg-surface-container transition-all active:scale-95">
+                    Clear Response
+                </button>
+<button class="px-6 py-2.5 rounded-lg border border-secondary text-secondary font-button flex items-center gap-2 hover:bg-secondary/5 transition-all active:scale-95">
+<span class="material-symbols-outlined text-xl">bookmark</span>
+                    Mark for Review
+                </button>
+</div>
+<div class="flex gap-4">
+<button class="flex items-center gap-2 px-6 py-2.5 rounded-lg bg-surface-container-high text-on-surface font-button hover:bg-surface-container-highest transition-all active:scale-95">
+<span class="material-symbols-outlined">chevron_left</span>
+                    Previous
+                </button>
+<button class="flex items-center gap-2 px-8 py-2.5 rounded-lg bg-primary-container text-white font-button shadow-lg shadow-primary/20 hover:brightness-110 transition-all active:scale-95">
+                    Save &amp; Next
+                    <span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<button class="px-8 py-2.5 rounded-lg bg-inverse-surface text-inverse-on-surface font-button hover:bg-on-surface transition-all active:scale-95">
+                Submit Test
+            </button>
+</div>
+</footer>
+</body></html>

@@ -1,56 +1,80 @@
-const featuresData = [
+const categoriesData = [
   {
     title: 'Student Management',
-    desc: 'Easily track student enrollment, attendance, grades, and behavior profiles in one unified dashboard.',
-    icon: '🎓'
+    tags: ['Enrollment', 'Profiles'],
+    icon: '🎓',
+    bgColor: 'bg-red-50'
   },
   {
     title: 'Teacher Portal',
-    desc: 'Empower educators with powerful tools for lesson planning, grading, and direct communication with parents.',
-    icon: '👨‍🏫'
+    tags: ['Lesson Plans', 'Grading'],
+    icon: '👨‍🏫',
+    bgColor: 'bg-orange-50'
   },
   {
     title: 'Finance & Fees',
-    desc: 'Automate fee collection, generate invoices, and get real-time financial reporting for your institution.',
-    icon: '💳'
+    tags: ['Invoices', 'Receipts'],
+    icon: '💳',
+    bgColor: 'bg-blue-50'
   },
   {
     title: 'Communication Hub',
-    desc: 'Seamless SMS and Email integration ensuring parents and staff are always updated instantly.',
-    icon: '💬'
+    tags: ['SMS', 'Email'],
+    icon: '💬',
+    bgColor: 'bg-purple-50'
   },
   {
     title: 'Exams & Results',
-    desc: 'Configure grading systems, auto-generate report cards, and analyze student performance trends.',
-    icon: '📊'
+    tags: ['Report Cards', 'Analytics'],
+    icon: '📊',
+    bgColor: 'bg-green-50'
   },
   {
     title: 'Library & Inventory',
-    desc: 'Keep track of library books, lab equipment, and school assets with our powerful inventory module.',
-    icon: '📚'
+    tags: ['Books', 'Assets'],
+    icon: '📚',
+    bgColor: 'bg-yellow-50'
   }
 ];
 
 const FeaturesSection = () => {
   return (
-    <section className="relative z-10 bg-bgPrimary py-24" id="features">
-      <div className="w-full max-w-[1200px] mx-auto px-8">
-        <div className="text-center max-w-[600px] mx-auto mb-24">
-          <p className="text-accentSecondary font-semibold uppercase tracking-[2px] text-[0.85rem] mb-2">Core Capabilities</p>
-          <h2 className="text-[clamp(2rem,4vw,3rem)] font-bold">Everything you need to run your school</h2>
+    <section className="bg-white py-20" id="features">
+      <div className="w-full max-w-[1400px] mx-auto px-4 md:px-8">
+        <div className="text-center max-w-[800px] mx-auto mb-16">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">Core Modules</h2>
+          <p className="text-gray-500 text-lg">Parishram covers every aspect of school management. Explore the modules below.</p>
         </div>
 
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8">
-          {featuresData.map((feature, idx) => (
-            <div className="bg-bgCard border border-borderColor rounded-[24px] p-8 md:p-10 transition-all duration-300 relative overflow-hidden z-[1] group hover:-translate-y-[5px] hover:border-borderHover hover:shadow-[0_8px_40px_rgba(0,0,0,0.35)]" key={idx}>
-              {/* Hover gradient background effect */}
-              <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_right,rgba(108,92,231,0.1),transparent_70%)] opacity-0 transition-opacity duration-300 -z-10 group-hover:opacity-100"></div>
-
-              <div className="w-[60px] h-[60px] rounded-2xl bg-bgGlass flex items-center justify-center text-2xl mb-8 border border-borderColor text-accentSecondary transition-all duration-300 group-hover:bg-accent-gradient group-hover:text-white group-hover:border-transparent group-hover:shadow-[0_0_20px_rgba(108,92,231,0.4)]">
-                {feature.icon}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {categoriesData.map((cat, idx) => (
+            <div className="border border-gray-200 rounded-2xl p-8 relative overflow-hidden bg-white shadow-sm hover:shadow-lg transition-shadow duration-300 group cursor-pointer" key={idx}>
+              
+              {/* Decorative Circle Background */}
+              <div className={`absolute -right-12 -bottom-12 w-40 h-40 rounded-full ${cat.bgColor} transition-transform duration-300 group-hover:scale-110`}></div>
+              
+              <h3 className="text-xl font-bold text-gray-800 mb-6 relative z-10">{cat.title}</h3>
+              
+              <div className="flex gap-2 mb-10 relative z-10">
+                {cat.tags.map(tag => (
+                  <span key={tag} className="px-4 py-1.5 rounded-full border border-gray-200 text-sm text-gray-600 bg-white shadow-sm">
+                    {tag}
+                  </span>
+                ))}
               </div>
-              <h3 className="text-xl mb-2">{feature.title}</h3>
-              <p className="text-textSecondary text-[0.95rem] leading-relaxed">{feature.desc}</p>
+
+              <div className="flex justify-between items-end relative z-10">
+                <div className="text-gray-600 font-medium flex items-center gap-2 hover:text-accentPrimary transition-colors">
+                  Explore Module
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                
+                <div className="text-5xl drop-shadow-md transform transition-transform group-hover:-translate-y-2">
+                  {cat.icon}
+                </div>
+              </div>
             </div>
           ))}
         </div>

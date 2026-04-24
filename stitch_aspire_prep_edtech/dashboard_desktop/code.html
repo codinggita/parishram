@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EduAspirant Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#3323cc",
+                        "surface-container-low": "#f3f3fe",
+                        "outline-variant": "#c3c6d7",
+                        "inverse-on-surface": "#f0f0fb",
+                        "inverse-surface": "#2e3039",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "on-primary-container": "#eeefff",
+                        "on-tertiary-fixed-variant": "#7d2d00",
+                        "tertiary": "#943700",
+                        "surface-container-highest": "#e1e2ed",
+                        "on-primary": "#ffffff",
+                        "primary": "#004ac6",
+                        "secondary-fixed-dim": "#c3c0ff",
+                        "on-tertiary-fixed": "#360f00",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "on-secondary": "#ffffff",
+                        "surface": "#faf8ff",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-container": "#2563eb",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#e7e7f3",
+                        "surface-variant": "#e1e2ed",
+                        "surface-dim": "#d9d9e5",
+                        "on-secondary-fixed": "#0f0069",
+                        "on-surface": "#191b23",
+                        "on-background": "#191b23",
+                        "secondary-container": "#645efb",
+                        "on-primary-fixed": "#00174b",
+                        "on-secondary-container": "#fffbff",
+                        "on-error-container": "#93000a",
+                        "background": "#faf8ff",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "tertiary-container": "#bc4800",
+                        "outline": "#737686",
+                        "inverse-primary": "#b4c5ff",
+                        "on-tertiary-container": "#ffede6",
+                        "surface-container": "#ededf9",
+                        "surface-tint": "#0053db",
+                        "surface-bright": "#faf8ff",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#dbe1ff",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed": "#e2dfff",
+                        "tertiary-fixed": "#ffdbcd",
+                        "secondary": "#4b41e1",
+                        "on-surface-variant": "#434655"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "lg": "48px",
+                        "xl": "80px",
+                        "gutter": "24px",
+                        "xs": "4px",
+                        "base": "8px",
+                        "sm": "12px",
+                        "md": "24px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "h2": ["Inter"],
+                        "h1": ["Inter"],
+                        "button": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "h3": ["Inter"]
+                    },
+                    "fontSize": {
+                        "h2": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "h1": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "button": ["16px", {"lineHeight": "1", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "label-sm": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400"}],
+                        "h3": ["24px", {"lineHeight": "1.4", "letterSpacing": "0em", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .custom-shadow { box-shadow: 0 4px 20px rgba(37, 99, 235, 0.04); }
+        .glass-panel { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen">
+<!-- SideNavBar (Authority Source: JSON) -->
+<aside class="h-screen w-64 fixed left-0 top-0 border-r border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-lg shadow-blue-500/5 dark:shadow-none flex flex-col py-8 px-4 gap-6 font-inter antialiased text-sm z-50">
+<div class="px-4 mb-2">
+<span class="text-lg font-black text-blue-600 dark:text-blue-400">EduAspirant</span>
+</div>
+<div class="flex items-center gap-3 px-4 py-2">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-fixed">
+<img alt="Student avatar" class="w-full h-full object-cover" data-alt="Portrait of a young male student wearing a neat shirt, professional lighting, clean studio background, sharp focus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWK9jLZCP61A61k_uNtTIw0x6MMMM20XD0RgkdjC50tTexLxUxZtZ6iuZI9_uOPNV3y8-nmE3cT9QOPdQxmICodEPhlAMSzJfNCPPtci4vE3EwghVuyIfwr-9VEJK9MVnrWETeWdjkojT05c2ooK329HgqSrSw592CoqfxuZ5k49UHmqJXW4b1MN-s7R56ztVzcmXq7-AOf3xBi99w7RDbbPrB1N53FpSUnd7ugVmoJwf7hfmaIowQqaOboUjJVXh_ZyciVIBy_Q"/>
+</div>
+<div>
+<p class="font-bold text-on-surface">Aditya Sharma</p>
+<p class="text-xs text-slate-500">NEET 2025 Aspirant</p>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<!-- Dashboard is Active -->
+<a class="flex items-center gap-3 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-lg px-4 py-2.5 font-semibold cursor-pointer active:scale-98 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-2.5 hover:bg-slate-50 dark:hover:bg-slate-800 cursor-pointer active:scale-98 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span>My Learning</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-2.5 hover:bg-slate-50 dark:hover:bg-slate-800 cursor-pointer active:scale-98 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="live_tv">live_tv</span>
+<span>Live Classes</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-2.5 hover:bg-slate-50 dark:hover:bg-slate-800 cursor-pointer active:scale-98 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span>Analytics</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-2.5 hover:bg-slate-50 dark:hover:bg-slate-800 cursor-pointer active:scale-98 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+</nav>
+<div class="px-4 mt-auto">
+<button class="w-full bg-primary-container text-on-primary py-3 rounded-lg font-button text-button shadow-sm hover:opacity-90 transition-opacity">
+                Upgrade to Pro
+            </button>
+</div>
+<div class="border-t border-slate-100 dark:border-slate-800 pt-4 space-y-1">
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-2.5 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span>Help Center</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-2.5 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span>Logout</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 p-gutter max-w-container-max mx-auto">
+<!-- Top App Bar (Semantic Shell) -->
+<header class="flex justify-between items-center mb-lg">
+<div>
+<h1 class="font-h1 text-h1 text-on-surface">Good Morning, Aditya!</h1>
+<p class="font-body-lg text-slate-500 mt-1">Here's your progress for the NEET 2025 prep journey.</p>
+</div>
+<div class="flex items-center gap-sm">
+<div class="bg-surface-container-high px-4 py-2 rounded-full flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="bolt" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span class="font-bold text-on-surface">12 Day Streak</span>
+</div>
+</div>
+</header>
+<!-- 12-Column Grid Dashboard -->
+<div class="grid grid-cols-12 gap-md">
+<!-- Bento Stat Card: Tests Attempted (Col 1-4) -->
+<div class="col-span-4 bg-white rounded-xl p-md custom-shadow border border-slate-100/50 flex flex-col justify-between min-h-[160px]">
+<div class="flex justify-between items-start">
+<div class="p-2 bg-blue-50 rounded-lg">
+<span class="material-symbols-outlined text-blue-600" data-icon="assignment">assignment</span>
+</div>
+<span class="text-xs font-bold text-green-600 bg-green-50 px-2 py-1 rounded">+3 this week</span>
+</div>
+<div>
+<p class="text-slate-500 font-label-sm">Tests attempted</p>
+<p class="font-h2 text-h2 text-on-surface">42</p>
+</div>
+</div>
+<!-- Bento Stat Card: Accuracy % (Col 5-8) -->
+<div class="col-span-4 bg-white rounded-xl p-md custom-shadow border border-slate-100/50 flex flex-col justify-between min-h-[160px]">
+<div class="flex justify-between items-start">
+<div class="p-2 bg-purple-50 rounded-lg">
+<span class="material-symbols-outlined text-purple-600" data-icon="target">target</span>
+</div>
+<span class="text-xs font-bold text-blue-600 bg-blue-50 px-2 py-1 rounded">Top 5%</span>
+</div>
+<div>
+<p class="text-slate-500 font-label-sm">Accuracy %</p>
+<div class="flex items-end gap-2">
+<p class="font-h2 text-h2 text-on-surface">88.4%</p>
+<span class="material-symbols-outlined text-green-500 pb-1" data-icon="trending_up">trending_up</span>
+</div>
+</div>
+</div>
+<!-- Bento Stat Card: Global Rank (Col 9-12) -->
+<div class="col-span-4 bg-white rounded-xl p-md custom-shadow border border-slate-100/50 flex flex-col justify-between min-h-[160px]">
+<div class="flex justify-between items-start">
+<div class="p-2 bg-amber-50 rounded-lg">
+<span class="material-symbols-outlined text-amber-600" data-icon="leaderboard" style="font-variation-settings: 'FILL' 1;">leaderboard</span>
+</div>
+<span class="text-xs font-bold text-amber-600 bg-amber-50 px-2 py-1 rounded">Silver Tier</span>
+</div>
+<div>
+<p class="text-slate-500 font-label-sm">National Rank</p>
+<p class="font-h2 text-h2 text-on-surface">#1,284</p>
+</div>
+</div>
+<!-- Weak Subjects Focus Area (Col 1-7) -->
+<div class="col-span-7 bg-white rounded-xl p-md custom-shadow border border-slate-100/50">
+<div class="flex justify-between items-center mb-md">
+<h3 class="font-h3 text-h3 text-on-surface">Performance Analysis</h3>
+<button class="text-primary font-bold text-label-sm hover:underline">View Detailed Report</button>
+</div>
+<div class="space-y-sm">
+<!-- Biology -->
+<div class="space-y-xs">
+<div class="flex justify-between text-sm">
+<span class="font-semibold text-slate-700">Biology</span>
+<span class="text-slate-500">92%</span>
+</div>
+<div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+<div class="h-full bg-green-500 rounded-full" style="width: 92%;"></div>
+</div>
+</div>
+<!-- Physics (Weak Subject Focus) -->
+<div class="space-y-xs pt-2">
+<div class="flex justify-between text-sm">
+<div class="flex items-center gap-2">
+<span class="font-semibold text-slate-700">Physics</span>
+<span class="bg-red-50 text-red-600 text-[10px] px-1.5 py-0.5 rounded-full font-bold">WEAK AREA</span>
+</div>
+<span class="text-slate-500">64%</span>
+</div>
+<div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+<div class="h-full bg-red-400 rounded-full" style="width: 64%;"></div>
+</div>
+<p class="text-xs text-slate-400 mt-1">Recommended: Practice "Optics" &amp; "Thermodynamics" mcqs.</p>
+</div>
+<!-- Chemistry -->
+<div class="space-y-xs pt-2">
+<div class="flex justify-between text-sm">
+<span class="font-semibold text-slate-700">Chemistry</span>
+<span class="text-slate-500">78%</span>
+</div>
+<div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+<div class="h-full bg-amber-400 rounded-full" style="width: 78%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Subject Tags & Quick Actions (Col 8-12) -->
+<div class="col-span-5 flex flex-col gap-md">
+<div class="bg-primary-container rounded-xl p-md text-on-primary-container relative overflow-hidden">
+<!-- Abstract Background Pattern -->
+<div class="absolute -right-10 -bottom-10 opacity-20 transform rotate-12">
+<span class="material-symbols-outlined text-[120px]" data-icon="school">school</span>
+</div>
+<h3 class="font-h3 text-h3 mb-2">Practice Session</h3>
+<p class="text-blue-100 text-sm mb-4">You're 20 minutes away from your daily goal. Start a quick quiz now.</p>
+<button class="bg-white text-primary px-6 py-2 rounded-lg font-button text-sm flex items-center gap-2 hover:bg-blue-50 transition-colors">
+                        Start Mock Test
+                        <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="bg-white rounded-xl p-md custom-shadow border border-slate-100/50 flex-1">
+<h3 class="font-label-sm text-slate-400 uppercase tracking-wider mb-sm">Subject Explorer</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-semibold">Organic Chemistry</span>
+<span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-semibold">Plant Physiology</span>
+<span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-semibold">Electromagnetism</span>
+<span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-semibold">Genetics</span>
+<span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-semibold">Physical Chemistry</span>
+<span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs font-semibold">Modern Physics</span>
+</div>
+</div>
+</div>
+<!-- Recent Activity Table-less layout (Col 1-12) -->
+<div class="col-span-12 bg-white rounded-xl p-md custom-shadow border border-slate-100/50">
+<div class="flex justify-between items-center mb-md">
+<h3 class="font-h3 text-h3 text-on-surface">Recent Practice Results</h3>
+<button class="text-slate-500 font-medium text-label-sm flex items-center gap-1">
+                        Filter by subject
+                        <span class="material-symbols-outlined text-sm" data-icon="expand_more">expand_more</span>
+</button>
+</div>
+<div class="space-y-2">
+<!-- Row 1 -->
+<div class="flex items-center justify-between p-4 rounded-lg hover:bg-slate-50 transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-green-50 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-green-600" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Full Length Mock Test #12</p>
+<p class="text-xs text-slate-400">Completed 2 hours ago • Duration: 3h 00m</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-bold text-on-surface">640/720</p>
+<p class="text-xs text-green-600 font-bold">Qualified</p>
+</div>
+<div class="flex gap-2">
+<button class="p-2 text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+</button>
+</div>
+</div>
+<!-- Row 2 -->
+<div class="flex items-center justify-between p-4 rounded-lg hover:bg-slate-50 transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-blue-600" data-icon="description">description</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Chemical Bonding - Sectional</p>
+<p class="text-xs text-slate-400">Completed Yesterday • Duration: 45m</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-bold text-on-surface">142/160</p>
+<p class="text-xs text-blue-600 font-bold">Excellent</p>
+</div>
+<div class="flex gap-2">
+<button class="p-2 text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+</button>
+</div>
+</div>
+<!-- Row 3 -->
+<div class="flex items-center justify-between p-4 rounded-lg hover:bg-slate-50 transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-red-50 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-red-600" data-icon="error">error</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Kinematics Quick Drill</p>
+<p class="text-xs text-slate-400">Completed 2 days ago • Duration: 15m</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-bold text-on-surface">45/100</p>
+<p class="text-xs text-red-500 font-bold">Needs Review</p>
+</div>
+<div class="flex gap-2">
+<button class="p-2 text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer (Authority Source: JSON) -->
+<footer class="w-full border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 flex flex-col md:flex-row justify-between items-center py-10 px-8 max-w-7xl mx-auto gap-4 mt-xl">
+<div class="flex items-center gap-2">
+<span class="text-blue-600 font-bold">EduAspirant</span>
+<span class="font-inter text-xs text-slate-500 dark:text-slate-400">© 2024 EduAspirant. Empowering India's future specialists.</span>
+</div>
+<div class="flex gap-6">
+<a class="font-inter text-xs text-slate-500 dark:text-slate-400 hover:text-blue-500 hover:underline underline-offset-4 transition-opacity duration-300" href="#">About</a>
+<a class="font-inter text-xs text-slate-500 dark:text-slate-400 hover:text-blue-500 hover:underline underline-offset-4 transition-opacity duration-300" href="#">Privacy</a>
+<a class="font-inter text-xs text-slate-500 dark:text-slate-400 hover:text-blue-500 hover:underline underline-offset-4 transition-opacity duration-300" href="#">Terms</a>
+<a class="font-inter text-xs text-slate-500 dark:text-slate-400 hover:text-blue-500 hover:underline underline-offset-4 transition-opacity duration-300" href="#">Support</a>
+</div>
+</footer>
+</main>
+<!-- Study Mode Toggle (Floating Glass Panel) -->
+<div class="fixed bottom-8 right-8 z-[60]">
+<div class="glass-panel px-6 py-3 rounded-full flex items-center gap-4 custom-shadow">
+<span class="text-sm font-bold text-on-surface">Focus Mode</span>
+<button class="w-12 h-6 bg-slate-200 rounded-full relative transition-colors duration-200">
+<div class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full shadow-sm"></div>
+</button>
+<span class="material-symbols-outlined text-primary" data-icon="visibility_off">visibility_off</span>
+</div>
+</div>
+</body></html>

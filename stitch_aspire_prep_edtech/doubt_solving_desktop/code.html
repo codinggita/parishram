@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed-variant": "#3323cc",
+                    "surface-container-low": "#f3f3fe",
+                    "outline-variant": "#c3c6d7",
+                    "inverse-on-surface": "#f0f0fb",
+                    "inverse-surface": "#2e3039",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "on-primary-container": "#eeefff",
+                    "on-tertiary-fixed-variant": "#7d2d00",
+                    "tertiary": "#943700",
+                    "surface-container-highest": "#e1e2ed",
+                    "on-primary": "#ffffff",
+                    "primary": "#004ac6",
+                    "secondary-fixed-dim": "#c3c0ff",
+                    "on-tertiary-fixed": "#360f00",
+                    "tertiary-fixed-dim": "#ffb596",
+                    "on-secondary": "#ffffff",
+                    "surface": "#faf8ff",
+                    "on-error": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-container": "#2563eb",
+                    "error-container": "#ffdad6",
+                    "surface-container-high": "#e7e7f3",
+                    "surface-variant": "#e1e2ed",
+                    "surface-dim": "#d9d9e5",
+                    "on-secondary-fixed": "#0f0069",
+                    "on-surface": "#191b23",
+                    "on-background": "#191b23",
+                    "secondary-container": "#645efb",
+                    "on-primary-fixed": "#00174b",
+                    "on-secondary-container": "#fffbff",
+                    "on-error-container": "#93000a",
+                    "background": "#faf8ff",
+                    "on-primary-fixed-variant": "#003ea8",
+                    "tertiary-container": "#bc4800",
+                    "outline": "#737686",
+                    "inverse-primary": "#b4c5ff",
+                    "on-tertiary-container": "#ffede6",
+                    "surface-container": "#ededf9",
+                    "surface-tint": "#0053db",
+                    "surface-bright": "#faf8ff",
+                    "error": "#ba1a1a",
+                    "primary-fixed": "#dbe1ff",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed": "#e2dfff",
+                    "tertiary-fixed": "#ffdbcd",
+                    "secondary": "#4b41e1",
+                    "on-surface-variant": "#434655"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "lg": "48px",
+                    "xl": "80px",
+                    "gutter": "24px",
+                    "xs": "4px",
+                    "base": "8px",
+                    "sm": "12px",
+                    "md": "24px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "h2": ["Inter"],
+                    "h1": ["Inter"],
+                    "button": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "h3": ["Inter"]
+            },
+            "fontSize": {
+                    "h2": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "h1": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "button": ["16px", {"lineHeight": "1", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "label-sm": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400"}],
+                    "h3": ["24px", {"lineHeight": "1.4", "letterSpacing": "0em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .custom-glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .level-1-shadow {
+            shadow-sm: 0 4px 20px rgba(37, 99, 235, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md min-h-screen">
+<!-- TopNavBar (Fixed Header) -->
+<nav class="fixed top-0 w-full z-50 border-b border-white/10 dark:border-slate-800 bg-white/70 backdrop-blur-lg dark:bg-slate-900/70 shadow-sm dark:shadow-none h-16">
+<div class="flex justify-between items-center px-8 h-full w-full max-w-7xl mx-auto">
+<div class="text-xl font-bold tracking-tight text-blue-600 dark:text-blue-400 font-h2">EduAspirant</div>
+<div class="hidden md:flex items-center gap-8 font-inter text-sm font-medium antialiased">
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-500 transition-colors" href="#">Courses</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-500 transition-colors" href="#">Practice</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-500 transition-colors" href="#">Test Series</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-500 transition-colors" href="#">Resources</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-slate-600 dark:text-slate-400 hover:text-blue-500 font-medium px-4 py-2">Login</button>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-lg font-button active:scale-95 duration-200">Get Started</button>
+</div>
+</div>
+</nav>
+<!-- SideNavBar (Fixed Sidebar) -->
+<aside class="h-screen w-64 fixed left-0 top-0 border-r border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 z-40 hidden md:flex flex-col h-full py-8 px-4 gap-6 pt-24 shadow-lg shadow-blue-500/5">
+<div class="flex items-center gap-3 px-4 mb-4">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container/20">
+<img alt="Student avatar" class="w-full h-full object-cover" data-alt="Portrait of a young Indian male student with glasses and a friendly expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDb6s_YUP_3Fdgvosrl3PCKB6mgKSA1NbaBmB5Mx-DsPfXCq8tjckNf7FyYm1uj92RoTGAbLBkFk7QMoPUTkEj0yqWgiB0D82yVZbKc1Ht0WBLk5JDwX5BVHgH4K32oHIhudMbuBlviVgdKEKYuuCc1P8-J1x8RpMBhHiQH6_-n6L6ssEDJqYrFTADSw6S42BSEIqiaXhWsqstZGJULSX5PZtkntLfxLv3wJifDZBRCwQpvMqE5Uqq9fakzxNffH4GxlobWoX6_2A"/>
+</div>
+<div>
+<p class="font-semibold text-on-surface">Aditya Sharma</p>
+<p class="text-xs text-slate-500">NEET 2025 Aspirant</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2 font-inter antialiased text-sm flex-1">
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-2.5 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all duration-200 cursor-pointer active:scale-98" href="#">
+<span class="material-symbols-outlined">dashboard</span> Dashboard
+            </a>
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-2.5 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all duration-200 cursor-pointer active:scale-98" href="#">
+<span class="material-symbols-outlined">auto_stories</span> My Learning
+            </a>
+<a class="flex items-center gap-3 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-lg px-4 py-2.5 font-semibold transition-all duration-200 cursor-pointer active:scale-98" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">live_tv</span> Live Classes
+            </a>
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-2.5 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all duration-200 cursor-pointer active:scale-98" href="#">
+<span class="material-symbols-outlined">analytics</span> Analytics
+            </a>
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-2.5 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all duration-200 cursor-pointer active:scale-98" href="#">
+<span class="material-symbols-outlined">settings</span> Settings
+            </a>
+</nav>
+<div class="mt-auto px-4">
+<div class="bg-blue-600 rounded-xl p-4 text-white mb-6">
+<p class="text-xs font-medium opacity-80">Pro Plan</p>
+<p class="font-bold mb-3">Upgrade to Pro</p>
+<button class="w-full bg-white text-blue-600 text-xs font-bold py-2 rounded-lg">Learn More</button>
+</div>
+<div class="flex flex-col gap-1">
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-2 hover:text-blue-500" href="#">
+<span class="material-symbols-outlined">help</span> Help Center
+                </a>
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-2 hover:text-error" href="#">
+<span class="material-symbols-outlined">logout</span> Logout
+                </a>
+</div>
+</div>
+</aside>
+<!-- Main Canvas -->
+<main class="md:ml-64 pt-24 pb-12 px-8 min-h-screen">
+<div class="max-w-4xl mx-auto space-y-md">
+<!-- Header & Ask Doubt Input -->
+<header class="mb-lg">
+<h1 class="font-h1 text-h1 text-on-surface mb-2">Doubt Solving Forum</h1>
+<p class="text-body-lg text-on-surface-variant">Get answers from expert mentors and fellow aspirants in minutes.</p>
+</header>
+<!-- Ask Box -->
+<div class="bg-white rounded-xl shadow-[0_4px_20px_rgba(37,99,235,0.04)] p-md border border-slate-100">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-full flex-shrink-0">
+<img alt="Avatar" class="rounded-full" data-alt="Close up avatar of the user Aditya Sharma" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuUl3R13bLgHUzHLjjEVCjLFVBM4nhL5EF9U6o4YYa2BpbU_WZu2LdkHpC1v6zBFwre2V01P8CvPo6FfvYmaO-dbioC_-O0AO-UcRqSdOyIf89xmIFlZ5wefekcbhmVtjUYTEhtMZQOejL24IUwJRxkpK4Gypog5IHXSCCshCrHKcSjUk1roOu2ZR6O9xU1OYGhziwUrXmuvw0z-hcmb5vWP7za6nUt8NFma4oAy8kXePNKWahakKI-_PLmuC1FjVMAqT8ZPjCtQ"/>
+</div>
+<div class="flex-1 space-y-4">
+<textarea class="w-full bg-slate-50 border-none focus:ring-2 focus:ring-primary rounded-xl p-4 text-body-md placeholder:text-slate-400 resize-none" placeholder="What is your doubt in Physics, Chemistry, or Biology?" rows="3"></textarea>
+<div class="flex justify-between items-center">
+<div class="flex gap-2">
+<button class="flex items-center gap-2 text-slate-600 bg-slate-50 px-4 py-2 rounded-full text-sm hover:bg-slate-100 transition-colors">
+<span class="material-symbols-outlined text-base">image</span> Add Image
+                                </button>
+<button class="flex items-center gap-2 text-slate-600 bg-slate-50 px-4 py-2 rounded-full text-sm hover:bg-slate-100 transition-colors">
+<span class="material-symbols-outlined text-base">tag</span> Subject
+                                </button>
+</div>
+<button class="bg-primary text-on-primary font-button px-8 py-2.5 rounded-lg active:scale-95 transition-all">Post Doubt</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Tabs/Filters -->
+<div class="flex gap-4 border-b border-slate-200 py-2 overflow-x-auto no-scrollbar">
+<button class="px-4 py-2 font-bold text-primary border-b-2 border-primary whitespace-nowrap">All Doubts</button>
+<button class="px-4 py-2 font-medium text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap">My Doubts</button>
+<button class="px-4 py-2 font-medium text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap">Solved</button>
+<button class="px-4 py-2 font-medium text-on-surface-variant hover:text-primary transition-colors whitespace-nowrap">Unanswered</button>
+</div>
+<!-- Community Feed -->
+<div class="space-y-6">
+<!-- Forum Card 1 -->
+<div class="bg-white rounded-xl shadow-[0_4px_20px_rgba(37,99,235,0.04)] border border-slate-100 overflow-hidden hover:border-primary/20 transition-all">
+<div class="p-md flex gap-6">
+<!-- Upvote Column -->
+<div class="flex flex-col items-center gap-1 mt-2">
+<button class="p-1 hover:bg-blue-50 rounded-lg text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'wght' 700;">expand_less</span>
+</button>
+<span class="font-bold text-lg text-primary">124</span>
+<button class="p-1 hover:bg-blue-50 rounded-lg text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'wght' 700;">expand_more</span>
+</button>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-2">
+<span class="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Physics</span>
+<span class="text-xs text-slate-400">• Posted by <b>Ishaan M.</b> 2 hours ago</span>
+</div>
+<h3 class="font-h3 text-h3 mb-3 text-on-surface">Can someone explain the derivation of Schrödinger's wave equation in simple terms?</h3>
+<p class="text-on-surface-variant line-clamp-3 mb-4">
+                                I'm struggling to understand the transition from classical wave equations to the time-dependent Schrödinger equation. Specifically, how the Hamiltonian operator is applied here. Any visual analogies would be great!
+                            </p>
+<div class="flex items-center justify-between">
+<div class="flex -space-x-2">
+<img alt="Avatar" class="w-8 h-8 rounded-full border-2 border-white" data-alt="Avatar of mentor Felix" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgM8wArMyiyCEFKGqMfoK2vAD99LPbLZRf-0utjIj34iKNZx-1kDL04fGntaK-5cQ87BXbgK8bMYTAgQvxqPEuu9-kcTPy3FTxAZeFnkUSMbQYzAh2P2g6KDwKgPNMpvEuodcQNEzKeqcgMb6ZsihPxOO5av2ZS9cMlPPimCq_nF0O4T1aQa8ZbY-fYafcYExHdUWibGr9THQPy4dhsapauch0XZUT-dOJuv7FG-4UHwglwv2TBHMHKT5qLDaoS5hCfQEHu8nnjg"/>
+<img alt="Avatar" class="w-8 h-8 rounded-full border-2 border-white" data-alt="Avatar of mentor Sarah" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmLBcl27OlNCrKMGaLhjjMYYaXIYwsfJeefEnh88aox4Q7oxH2UN-CLTtGg4KUQLlcvI5s-ZgyzjXTG0r84qjMkp0O5luZdEs8FpBlDcbhX9f9UdjSJMv2CNP84DWrBZ4Ap0HW3HPkpNLrQAwC3umjvvp5vdSlXGZj7lqbl3IJnz1FPrKkXLID10Y0Hh56obfEpd-NdXS30OOrBjdYHmFuU95i5YZ0FKpK1lVbyBGzBWOQ_bhj7tFD_W6ZVt65nvPwfMWONdPQpQ"/>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-slate-100 flex items-center justify-center text-[10px] font-bold text-slate-500">+12</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-1.5 text-slate-500 text-sm">
+<span class="material-symbols-outlined text-lg">chat_bubble</span> 42 Replies
+                                    </div>
+<div class="flex items-center gap-1.5 text-secondary font-semibold text-sm">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span> Expert Verified
+                                    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Forum Card 2 (With Image) -->
+<div class="bg-white rounded-xl shadow-[0_4px_20px_rgba(37,99,235,0.04)] border border-slate-100 overflow-hidden hover:border-primary/20 transition-all">
+<div class="p-md flex gap-6">
+<div class="flex flex-col items-center gap-1 mt-2">
+<button class="p-1 hover:bg-blue-50 rounded-lg text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'wght' 700;">expand_less</span>
+</button>
+<span class="font-bold text-lg text-on-surface-variant">56</span>
+<button class="p-1 hover:bg-blue-50 rounded-lg text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'wght' 700;">expand_more</span>
+</button>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-2">
+<span class="bg-tertiary/10 text-tertiary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Organic Chemistry</span>
+<span class="text-xs text-slate-400">• Posted by <b>Priya V.</b> 5 hours ago</span>
+</div>
+<h3 class="font-h3 text-h3 mb-3 text-on-surface">Naming this complex bridgehead compound?</h3>
+<div class="mb-4 rounded-xl overflow-hidden bg-slate-50 border border-slate-100">
+<img alt="Chemistry structure" class="w-full h-48 object-cover opacity-90" data-alt="A detailed hand-drawn chemical structure of a bridged bicyclic organic compound on a whiteboard with blue ink" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBaP527tJannpjMwQQxFzptShKCrjDUAdfkfwlHYuk3cAiK2nSmMWuhVw4Lwv3nc2WT6CwSQPDKuXSg43FwGVY2bgeL0eKGis0Gy2l_e4TeSwEoymp5pyJ5ZJn5U0IEaToYPorZMaQNxsnsCexRyT73djpZvgwM7eN-F8pJ_GAo8ePmf8LqrqNM7FrDp-mH4HIclaabocK1Y2qe1SsJHsZTL0HfoA1v2TT69BvwJtXUXCO90PWAWnoC5I_j_-xoyXbR5mRLyEbNw"/>
+</div>
+<p class="text-on-surface-variant mb-4">
+                                I follow the IUPAC rules but get confused with the numbering start point on bridgehead carbons. Is it the longest or shortest bridge first?
+                            </p>
+<div class="flex items-center justify-between">
+<div class="flex -space-x-2">
+<img alt="Avatar" class="w-8 h-8 rounded-full border-2 border-white" data-alt="Avatar of chemistry expert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBd7vSB28RnVkpVSniIPQdyK32sdEK-wcDZRctHpLuQ7V1GI9EFxca9HiSV_PvvA9O6pwOZeayrL88I2I50Qcs4Kx0HcUD_P-V71kAP9dE3CR4IIFdnnNACs2rse5K8rHpWKra9AY7mpxAyBsJClEWDtTy7Zt5oXs6bFGYViNZ6Rf4n-SR1aXiTTePj9MmXL85ljFaFa9507xvV9ZyP6btoz55FzC0mCvVEy2f4597M8fGutj9DPCGIMN4OAXqKMfhU6x-ICKAZwA"/>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-1.5 text-slate-500 text-sm">
+<span class="material-symbols-outlined text-lg">chat_bubble</span> 8 Replies
+                                    </div>
+<button class="text-primary font-semibold text-sm hover:underline">Help Solve</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Forum Card 3 -->
+<div class="bg-white rounded-xl shadow-[0_4px_20px_rgba(37,99,235,0.04)] border border-slate-100 overflow-hidden hover:border-primary/20 transition-all">
+<div class="p-md flex gap-6">
+<div class="flex flex-col items-center gap-1 mt-2">
+<button class="p-1 hover:bg-blue-50 rounded-lg text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'wght' 700;">expand_less</span>
+</button>
+<span class="font-bold text-lg text-on-surface-variant">89</span>
+<button class="p-1 hover:bg-blue-50 rounded-lg text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'wght' 700;">expand_more</span>
+</button>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-2">
+<span class="bg-emerald-50 text-emerald-600 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Biology</span>
+<span class="text-xs text-slate-400">• Posted by <b>Ananya K.</b> 8 hours ago</span>
+</div>
+<h3 class="font-h3 text-h3 mb-3 text-on-surface">Key differences between C3 and C4 pathways in photosynthesis?</h3>
+<p class="text-on-surface-variant mb-4">
+                                Is the main difference just the first stable product? I always mix up the Kranz anatomy part. Can someone simplify the CO2 fixation steps?
+                            </p>
+<div class="flex items-center justify-between">
+<div class="flex -space-x-2">
+<img alt="Avatar" class="w-8 h-8 rounded-full border-2 border-white" data-alt="Avatar of biology mentor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKC_ZDtOOvY7REe2OvYqlxw4eMtKFUnUMCmuD6ywnA7Sv41NseTzt6zpP7MxPJzTvYNeIeNHldiMoIjX-1TeRedoSenzbSJ-QxjERU3U_u2fZZmou0CaER_nweQbbMMBQGz0lvDmhrGAD7FXjtDZ-AlR1qrkDT97exoTVCnHVSsId3WkvmfzzCzMOo8wnu6ipA-2noj1WdId6bdnAXn2IZLmZdDGmXH3hJI93D6AJxnaOTQMtA_qCUCquLlqKvakX5IP8HYc1ZUw"/>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-1.5 text-slate-500 text-sm">
+<span class="material-symbols-outlined text-lg">chat_bubble</span> 15 Replies
+                                    </div>
+<div class="flex items-center gap-1.5 text-secondary font-semibold text-sm">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span> Expert Verified
+                                    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Load More -->
+<div class="flex justify-center pt-8">
+<button class="bg-white border-2 border-primary text-primary px-8 py-3 rounded-lg font-button hover:bg-primary hover:text-on-primary transition-all">Load More Doubts</button>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="md:ml-64 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800">
+<div class="flex flex-col md:flex-row justify-between items-center py-10 px-8 max-w-7xl mx-auto gap-4">
+<div class="text-blue-600 font-bold text-xl">EduAspirant</div>
+<div class="text-inter text-xs text-slate-500 dark:text-slate-400">
+                © 2024 EduAspirant. Empowering India's future specialists.
+            </div>
+<div class="flex gap-6">
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-500 hover:underline underline-offset-4 text-xs transition-opacity duration-300" href="#">About</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-500 hover:underline underline-offset-4 text-xs transition-opacity duration-300" href="#">Privacy</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-500 hover:underline underline-offset-4 text-xs transition-opacity duration-300" href="#">Terms</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-500 hover:underline underline-offset-4 text-xs transition-opacity duration-300" href="#">Support</a>
+</div>
+</div>
+</footer>
+</body></html>

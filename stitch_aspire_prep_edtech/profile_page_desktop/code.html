@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-secondary-fixed-variant": "#3323cc",
+                "surface-container-low": "#f3f3fe",
+                "outline-variant": "#c3c6d7",
+                "inverse-on-surface": "#f0f0fb",
+                "inverse-surface": "#2e3039",
+                "primary-fixed-dim": "#b4c5ff",
+                "on-primary-container": "#eeefff",
+                "on-tertiary-fixed-variant": "#7d2d00",
+                "tertiary": "#943700",
+                "surface-container-highest": "#e1e2ed",
+                "on-primary": "#ffffff",
+                "primary": "#004ac6",
+                "secondary-fixed-dim": "#c3c0ff",
+                "on-tertiary-fixed": "#360f00",
+                "tertiary-fixed-dim": "#ffb596",
+                "on-secondary": "#ffffff",
+                "surface": "#faf8ff",
+                "on-error": "#ffffff",
+                "surface-container-lowest": "#ffffff",
+                "primary-container": "#2563eb",
+                "error-container": "#ffdad6",
+                "surface-container-high": "#e7e7f3",
+                "surface-variant": "#e1e2ed",
+                "surface-dim": "#d9d9e5",
+                "on-secondary-fixed": "#0f0069",
+                "on-surface": "#191b23",
+                "on-background": "#191b23",
+                "secondary-container": "#645efb",
+                "on-primary-fixed": "#00174b",
+                "on-secondary-container": "#fffbff",
+                "on-error-container": "#93000a",
+                "background": "#faf8ff",
+                "on-primary-fixed-variant": "#003ea8",
+                "tertiary-container": "#bc4800",
+                "outline": "#737686",
+                "inverse-primary": "#b4c5ff",
+                "on-tertiary-container": "#ffede6",
+                "surface-container": "#ededf9",
+                "surface-tint": "#0053db",
+                "surface-bright": "#faf8ff",
+                "error": "#ba1a1a",
+                "primary-fixed": "#dbe1ff",
+                "on-tertiary": "#ffffff",
+                "secondary-fixed": "#e2dfff",
+                "tertiary-fixed": "#ffdbcd",
+                "secondary": "#4b41e1",
+                "on-surface-variant": "#434655"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "lg": "48px",
+                "xl": "80px",
+                "gutter": "24px",
+                "xs": "4px",
+                "base": "8px",
+                "sm": "12px",
+                "md": "24px",
+                "container-max": "1280px"
+            },
+            "fontFamily": {
+                "h2": ["Inter"],
+                "h1": ["Inter"],
+                "button": ["Inter"],
+                "label-sm": ["Inter"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "h3": ["Inter"]
+            },
+            "fontSize": {
+                "h2": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                "h1": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "button": ["16px", {"lineHeight": "1", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                "label-sm": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400"}],
+                "h3": ["24px", {"lineHeight": "1.4", "letterSpacing": "0em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #faf8ff; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .glass-card { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .ambient-shadow { box-shadow: 0 4px 20px rgba(37, 99, 235, 0.04); }
+        .elevation-2 { box-shadow: 0 12px 40px rgba(37, 99, 235, 0.08); }
+    </style>
+</head>
+<body class="bg-background text-on-background">
+<!-- SideNavBar Integration -->
+<aside class="h-screen w-64 fixed left-0 top-0 border-r border-slate-100 bg-white flex flex-col h-full py-8 px-4 gap-6 font-inter antialiased text-sm shadow-lg shadow-blue-500/5">
+<div class="px-4 mb-2">
+<span class="text-lg font-black text-blue-600">EduAspirant</span>
+</div>
+<div class="flex flex-col gap-2 flex-grow">
+<a class="flex items-center gap-3 text-slate-500 px-4 py-2.5 hover:bg-slate-50 transition-all duration-200 cursor-pointer active:scale-98" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 px-4 py-2.5 hover:bg-slate-50 transition-all duration-200 cursor-pointer active:scale-98" href="#">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span>My Learning</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 px-4 py-2.5 hover:bg-slate-50 transition-all duration-200 cursor-pointer active:scale-98" href="#">
+<span class="material-symbols-outlined" data-icon="live_tv">live_tv</span>
+<span>Live Classes</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 px-4 py-2.5 hover:bg-slate-50 transition-all duration-200 cursor-pointer active:scale-98" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span>Analytics</span>
+</a>
+<!-- Active State: Settings (contextual mapping for Profile/Settings) -->
+<a class="flex items-center gap-3 bg-blue-50 text-blue-600 rounded-lg px-4 py-2.5 font-semibold cursor-pointer active:scale-98" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+</div>
+<div class="mt-auto flex flex-col gap-2 border-t border-slate-100 pt-6">
+<div class="flex items-center gap-3 px-4 mb-4">
+<img alt="Aditya Sharma" class="w-10 h-10 rounded-full object-cover" data-alt="professional headshot of a young indian male student with a friendly expression and glasses in a bright studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_8Za0rQ25YYRS1rjW7LwysgPa4vUJkBm-zHaZgW9sra2ekcVMKJLOzik-ZdPT_u-YikZSQLFT7KAnG4FtVLZheEUscIcW-pmMtIkJfVfIN-EaPJsRRsQhog33TTRc_uT4eMrsjr8A_keE5tslkJsAAZebQjUSHifclm-kLbYuZWx7571E2vycUgO_jTPk30_YO5PIFs0YzWODSBJET4eoLVvS6_ybt0ILvwxyCuiwj49qPw-zKDDApgIFbFt_2rsgolPmIswqfA"/>
+<div class="flex flex-col">
+<span class="font-semibold text-slate-900">Aditya Sharma</span>
+<span class="text-[10px] text-slate-500 uppercase tracking-wider font-bold">NEET 2025 Aspirant</span>
+</div>
+</div>
+<button class="bg-primary text-on-primary rounded-lg py-2.5 font-semibold text-sm mx-2 mb-4 hover:opacity-90 active:scale-95 transition-all">
+                Upgrade to Pro
+            </button>
+<a class="flex items-center gap-3 text-slate-500 px-4 py-2.5 hover:bg-slate-50 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span>Help Center</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 px-4 py-2.5 hover:bg-slate-50 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span>Logout</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 p-lg max-w-7xl mx-auto">
+<!-- Header Section -->
+<header class="mb-lg flex justify-between items-end">
+<div>
+<h1 class="font-h1 text-h1 text-on-surface">Profile &amp; Performance</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-2">Manage your account settings and track your academic journey.</p>
+</div>
+<div class="flex gap-sm">
+<button class="font-button text-button px-md py-3 rounded-xl border border-outline text-primary hover:bg-primary-container/5 transition-colors">
+                    Edit Profile
+                </button>
+<button class="font-button text-button px-md py-3 rounded-xl bg-primary text-on-primary shadow-lg shadow-primary/20 hover:opacity-90 active:scale-95 transition-all">
+                    Download Report
+                </button>
+</div>
+</header>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-12 gap-gutter">
+<!-- Profile Info Card (Span 4) -->
+<div class="col-span-4 glass-card rounded-xl p-md ambient-shadow flex flex-col items-center text-center">
+<div class="relative mb-md">
+<div class="w-32 h-32 rounded-full p-1 bg-gradient-to-tr from-primary to-secondary">
+<img alt="Aditya Sharma" class="w-full h-full rounded-full object-cover border-4 border-white" data-alt="young male medical student smiling confidently with a professional academic background and soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUM0V8SYwpayJ5-fHdJwArjm9RB-Ov_dwDIKto9PKHMEJNjAnp9cBOKvkz6EF-ZCVVt-_53qPfL2NksDdUkGGHThGgk2waHj6652AYuJt7re0FgXT7gH20BFyBwxgqFY5M51vxq4X71t5SzqMDOEqzpb8oLsbKjZ8A6UEQyqAhHQ4fDAheq8K1pWndujSNi2Y9UOQsPVD3YPbNjFs5bpZn0aqXZsMAI7b1emARM9gSuZHd-JIn9TUOM7AAqKqgJvUq1YHKjBqU7w"/>
+</div>
+<div class="absolute bottom-1 right-1 bg-primary text-on-primary p-2 rounded-full border-4 border-white">
+<span class="material-symbols-outlined text-sm" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<h2 class="font-h2 text-h2 text-on-surface mb-xs">Aditya Sharma</h2>
+<div class="bg-secondary-fixed text-on-secondary-fixed-variant px-3 py-1 rounded-full text-label-sm font-label-sm mb-md inline-block">
+                    NEET 2025 Aspirant
+                </div>
+<div class="w-full space-y-md border-t border-outline-variant pt-md text-left">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="mail">mail</span>
+<div>
+<p class="text-[10px] text-on-surface-variant font-bold uppercase tracking-widest">Email Address</p>
+<p class="font-body-md text-body-md text-on-surface">aditya.sharma@eduasp.in</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="phone_iphone">phone_iphone</span>
+<div>
+<p class="text-[10px] text-on-surface-variant font-bold uppercase tracking-widest">Mobile Number</p>
+<p class="font-body-md text-body-md text-on-surface">+91 98765 43210</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="school">school</span>
+<div>
+<p class="text-[10px] text-on-surface-variant font-bold uppercase tracking-widest">Current Institution</p>
+<p class="font-body-md text-body-md text-on-surface">Apex Senior Secondary School</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Stats Overview (Span 8) -->
+<div class="col-span-8 grid grid-cols-2 gap-gutter">
+<!-- Learning Progress -->
+<div class="glass-card rounded-xl p-md ambient-shadow">
+<div class="flex justify-between items-start mb-md">
+<h3 class="font-h3 text-h3 text-on-surface">Course Progress</h3>
+<span class="material-symbols-outlined text-primary" data-icon="trending_up">trending_up</span>
+</div>
+<div class="space-y-md">
+<div>
+<div class="flex justify-between mb-2">
+<span class="font-label-sm text-label-sm">Biology: Genetics</span>
+<span class="font-label-sm text-label-sm text-primary">82%</span>
+</div>
+<div class="h-2 w-full bg-primary-fixed rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[82%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="font-label-sm text-label-sm">Physics: Optics</span>
+<span class="font-label-sm text-label-sm text-primary">45%</span>
+</div>
+<div class="h-2 w-full bg-primary-fixed rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[45%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2">
+<span class="font-label-sm text-label-sm">Chemistry: Organic</span>
+<span class="font-label-sm text-label-sm text-primary">67%</span>
+</div>
+<div class="h-2 w-full bg-primary-fixed rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[67%]"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Summary Stats -->
+<div class="grid grid-cols-2 gap-4">
+<div class="glass-card rounded-xl p-md ambient-shadow flex flex-col justify-between border-b-4 border-primary">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="timer">timer</span>
+<div>
+<p class="font-h2 text-h2 text-on-surface">124h</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Study Time</p>
+</div>
+</div>
+<div class="glass-card rounded-xl p-md ambient-shadow flex flex-col justify-between border-b-4 border-tertiary">
+<span class="material-symbols-outlined text-tertiary text-3xl" data-icon="quiz">quiz</span>
+<div>
+<p class="font-h2 text-h2 text-on-surface">1,240</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">MCQs Solved</p>
+</div>
+</div>
+<div class="glass-card rounded-xl p-md ambient-shadow flex flex-col justify-between border-b-4 border-secondary">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="military_tech">military_tech</span>
+<div>
+<p class="font-h2 text-h2 text-on-surface">Rank 42</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Global Leaderboard</p>
+</div>
+</div>
+<div class="glass-card rounded-xl p-md ambient-shadow flex flex-col justify-between border-b-4 border-on-secondary-fixed-variant">
+<span class="material-symbols-outlined text-on-secondary-fixed-variant text-3xl" data-icon="local_fire_department">local_fire_department</span>
+<div>
+<p class="font-h2 text-h2 text-on-surface">14 Days</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Daily Streak</p>
+</div>
+</div>
+</div>
+<!-- Test History List (Full width of the 8-col span) -->
+<div class="col-span-2 glass-card rounded-xl p-md ambient-shadow">
+<div class="flex justify-between items-center mb-md">
+<h3 class="font-h3 text-h3 text-on-surface">Recent Test Performance</h3>
+<button class="text-primary font-label-sm text-label-sm hover:underline">View All History</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="border-b border-outline-variant">
+<th class="pb-3 font-label-sm text-label-sm text-on-surface-variant">Test Module</th>
+<th class="pb-3 font-label-sm text-label-sm text-on-surface-variant">Date</th>
+<th class="pb-3 font-label-sm text-label-sm text-on-surface-variant text-center">Score</th>
+<th class="pb-3 font-label-sm text-label-sm text-on-surface-variant text-right">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100">
+<tr>
+<td class="py-4">
+<p class="font-body-md text-body-md font-semibold text-on-surface">Full Length Mock Test #42</p>
+<p class="text-[12px] text-on-surface-variant">National Standard Level</p>
+</td>
+<td class="py-4 font-body-md text-body-md text-on-surface-variant">Oct 24, 2024</td>
+<td class="py-4 text-center">
+<span class="font-body-md text-body-md font-bold text-on-surface">682</span>
+<span class="text-xs text-on-surface-variant">/ 720</span>
+</td>
+<td class="py-4 text-right">
+<span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-[12px] font-bold">Excellent</span>
+</td>
+</tr>
+<tr>
+<td class="py-4">
+<p class="font-body-md text-body-md font-semibold text-on-surface">Chapter Test: Plant Physiology</p>
+<p class="text-[12px] text-on-surface-variant">Biology Specialized</p>
+</td>
+<td class="py-4 font-body-md text-body-md text-on-surface-variant">Oct 21, 2024</td>
+<td class="py-4 text-center">
+<span class="font-body-md text-body-md font-bold text-on-surface">92</span>
+<span class="text-xs text-on-surface-variant">/ 100</span>
+</td>
+<td class="py-4 text-right">
+<span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-[12px] font-bold">Excellent</span>
+</td>
+</tr>
+<tr>
+<td class="py-4">
+<p class="font-body-md text-body-md font-semibold text-on-surface">Chemistry: Periodic Trends</p>
+<p class="text-[12px] text-on-surface-variant">Practice Quiz</p>
+</td>
+<td class="py-4 font-body-md text-body-md text-on-surface-variant">Oct 18, 2024</td>
+<td class="py-4 text-center">
+<span class="font-body-md text-body-md font-bold text-on-surface">45</span>
+<span class="text-xs text-on-surface-variant">/ 50</span>
+</td>
+<td class="py-4 text-right">
+<span class="bg-primary-fixed text-primary px-3 py-1 rounded-full text-[12px] font-bold">Good</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- Account Settings & Customization (Full width footer-style grid) -->
+<div class="col-span-12 glass-card rounded-xl p-md ambient-shadow mt-gutter grid grid-cols-3 gap-lg">
+<div>
+<h3 class="font-label-sm text-label-sm text-on-surface font-bold uppercase tracking-widest mb-md">Personalization</h3>
+<div class="space-y-sm">
+<div class="flex items-center justify-between p-sm hover:bg-surface-container-low rounded-lg transition-colors cursor-pointer">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="dark_mode">dark_mode</span>
+<span class="font-body-md text-body-md">Theme Selection</span>
+</div>
+<span class="text-primary font-bold text-sm">Light</span>
+</div>
+<div class="flex items-center justify-between p-sm hover:bg-surface-container-low rounded-lg transition-colors cursor-pointer">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="notifications">notifications</span>
+<span class="font-body-md text-body-md">Notifications</span>
+</div>
+<span class="material-symbols-outlined text-primary" data-icon="toggle_on" style="font-variation-settings: 'FILL' 1;">toggle_on</span>
+</div>
+</div>
+</div>
+<div>
+<h3 class="font-label-sm text-label-sm text-on-surface font-bold uppercase tracking-widest mb-md">Security</h3>
+<div class="space-y-sm">
+<div class="flex items-center justify-between p-sm hover:bg-surface-container-low rounded-lg transition-colors cursor-pointer">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="lock_reset">lock_reset</span>
+<span class="font-body-md text-body-md">Change Password</span>
+</div>
+<span class="material-symbols-outlined text-outline" data-icon="chevron_right">chevron_right</span>
+</div>
+<div class="flex items-center justify-between p-sm hover:bg-surface-container-low rounded-lg transition-colors cursor-pointer">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="security">security</span>
+<span class="font-body-md text-body-md">Two-Factor Auth</span>
+</div>
+<span class="text-on-surface-variant text-sm">Off</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col justify-between">
+<div>
+<h3 class="font-label-sm text-label-sm text-on-surface font-bold uppercase tracking-widest mb-md">Danger Zone</h3>
+<button class="w-full flex items-center gap-3 p-sm text-error hover:bg-error-container/20 rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="font-body-md text-body-md font-semibold">Sign Out from all devices</span>
+</button>
+</div>
+<p class="text-[10px] text-on-surface-variant text-center opacity-50">App Version 2.4.1-stable • EduAspirant Platform</p>
+</div>
+</div>
+</div>
+<!-- Footer Integration -->
+<footer class="w-full border-t border-slate-200 bg-slate-50 flex flex-col md:flex-row justify-between items-center py-10 px-8 max-w-7xl mx-auto gap-4 mt-xl font-inter text-xs text-slate-500">
+<div class="flex items-center gap-2">
+<span class="text-blue-600 font-bold">EduAspirant</span>
+<span class="opacity-50">|</span>
+<span>© 2024 EduAspirant. Empowering India's future specialists.</span>
+</div>
+<div class="flex gap-6">
+<a class="hover:text-blue-500 hover:underline underline-offset-4 transition-opacity duration-300" href="#">About</a>
+<a class="hover:text-blue-500 hover:underline underline-offset-4 transition-opacity duration-300" href="#">Privacy</a>
+<a class="hover:text-blue-500 hover:underline underline-offset-4 transition-opacity duration-300" href="#">Terms</a>
+<a class="hover:text-blue-500 hover:underline underline-offset-4 transition-opacity duration-300" href="#">Support</a>
+</div>
+</footer>
+</main>
+</body></html>

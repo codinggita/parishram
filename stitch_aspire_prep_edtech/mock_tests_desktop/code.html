@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#3323cc",
+                        "surface-container-low": "#f3f3fe",
+                        "outline-variant": "#c3c6d7",
+                        "inverse-on-surface": "#f0f0fb",
+                        "inverse-surface": "#2e3039",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "on-primary-container": "#eeefff",
+                        "on-tertiary-fixed-variant": "#7d2d00",
+                        "tertiary": "#943700",
+                        "surface-container-highest": "#e1e2ed",
+                        "on-primary": "#ffffff",
+                        "primary": "#004ac6",
+                        "secondary-fixed-dim": "#c3c0ff",
+                        "on-tertiary-fixed": "#360f00",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "on-secondary": "#ffffff",
+                        "surface": "#faf8ff",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-container": "#2563eb",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#e7e7f3",
+                        "surface-variant": "#e1e2ed",
+                        "surface-dim": "#d9d9e5",
+                        "on-secondary-fixed": "#0f0069",
+                        "on-surface": "#191b23",
+                        "on-background": "#191b23",
+                        "secondary-container": "#645efb",
+                        "on-primary-fixed": "#00174b",
+                        "on-secondary-container": "#fffbff",
+                        "on-error-container": "#93000a",
+                        "background": "#faf8ff",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "tertiary-container": "#bc4800",
+                        "outline": "#737686",
+                        "inverse-primary": "#b4c5ff",
+                        "on-tertiary-container": "#ffede6",
+                        "surface-container": "#ededf9",
+                        "surface-tint": "#0053db",
+                        "surface-bright": "#faf8ff",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#dbe1ff",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed": "#e2dfff",
+                        "tertiary-fixed": "#ffdbcd",
+                        "secondary": "#4b41e1",
+                        "on-surface-variant": "#434655"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "lg": "48px",
+                        "xl": "80px",
+                        "gutter": "24px",
+                        "xs": "4px",
+                        "base": "8px",
+                        "sm": "12px",
+                        "md": "24px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "h2": ["Inter"],
+                        "h1": ["Inter"],
+                        "button": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "h3": ["Inter"]
+                    },
+                    "fontSize": {
+                        "h2": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "h1": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "button": ["16px", {"lineHeight": "1", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "label-sm": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400"}],
+                        "h3": ["24px", {"lineHeight": "1.4", "letterSpacing": "0em", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .card-shadow {
+            box-shadow: 0 4px 20px rgba(37, 99, 235, 0.04);
+        }
+        .glass-nav {
+            backdrop-filter: blur(16px);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased">
+<!-- SideNavBar Anchor -->
+<aside class="h-screen w-64 fixed left-0 top-0 border-r border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900 flex flex-col h-full py-8 px-4 gap-6 z-50 shadow-lg shadow-blue-500/5 dark:shadow-none">
+<div class="px-4">
+<span class="text-lg font-black text-blue-600 dark:text-blue-400">EduAspirant</span>
+</div>
+<div class="flex items-center gap-3 px-4 py-2 mb-4">
+<img alt="Aditya Sharma" class="w-10 h-10 rounded-full object-cover ring-2 ring-blue-50" data-alt="Close-up portrait of a focused young Indian student in a casual shirt, neutral background, soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFBrE-OsyjhL01My1YVUWxvUPF_OxOEhx3w_roINIgPnNYPgrDAYSrsLr0uyzg2K0n6-RL3ooeharPMRK1vfrslLhTcEaPd46wSbGjiZpSq1rQOReqIAqKx4lP-jsW8OYEfX9h9UuCaRamVjDf3MLN_3ICifnFO5zhWzSupzoyEv0wAoxx5oOqMMP0aNXY055ZKNVYkpjtMvBJs8DDGi8bgUDfGQNXkDSZBqqT56xNqQRfwscnjpC85cFHK_oLGTEc7rZM4vMXwQ"/>
+<div class="overflow-hidden">
+<p class="font-semibold text-sm truncate">Aditya Sharma</p>
+<p class="text-xs text-slate-500 truncate">NEET 2025 Aspirant</p>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-2.5 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all duration-200 cursor-pointer active:scale-98" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-sm text-label-sm">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-2.5 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all duration-200 cursor-pointer active:scale-98" href="#">
+<span class="material-symbols-outlined">auto_stories</span>
+<span class="font-label-sm text-label-sm">My Learning</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-2.5 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all duration-200 cursor-pointer active:scale-98" href="#">
+<span class="material-symbols-outlined">live_tv</span>
+<span class="font-label-sm text-label-sm">Live Classes</span>
+</a>
+<!-- Active State: Test Series (Inferred from Mock Test Context) -->
+<a class="flex items-center gap-3 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-lg px-4 py-2.5 font-semibold cursor-pointer active:scale-98" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">analytics</span>
+<span class="font-label-sm text-label-sm">Analytics</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-2.5 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all duration-200 cursor-pointer active:scale-98" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label-sm text-label-sm">Settings</span>
+</a>
+</nav>
+<div class="mt-auto space-y-4">
+<div class="bg-blue-600 rounded-xl p-4 text-white">
+<p class="text-xs font-medium opacity-90 mb-1">Unlock Full Prep</p>
+<p class="font-bold text-sm mb-3">Upgrade to Pro</p>
+<button class="w-full bg-white text-blue-600 text-xs font-bold py-2 rounded-lg transition-transform active:scale-95">Upgrade Now</button>
+</div>
+<div class="pt-4 border-t border-slate-100 dark:border-slate-800">
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-2.5 hover:bg-slate-50 transition-all" href="#">
+<span class="material-symbols-outlined">help</span>
+<span class="font-label-sm text-label-sm">Help Center</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-2.5 hover:bg-slate-50 transition-all" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-label-sm text-label-sm">Logout</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 min-h-screen">
+<!-- Top Sticky Filter Bar -->
+<header class="sticky top-0 z-40 bg-white/70 backdrop-blur-lg border-b border-white/10 glass-nav h-16 flex items-center px-8 justify-between">
+<div class="flex items-center gap-8">
+<h1 class="font-h3 text-h3 text-on-surface">Mock Test Series</h1>
+<div class="flex items-center gap-3">
+<div class="relative">
+<select class="appearance-none bg-surface-container-low border-none rounded-full px-5 py-2 pr-10 text-label-sm font-label-sm focus:ring-2 focus:ring-primary/20 cursor-pointer">
+<option>All Subjects</option>
+<option>Biology</option>
+<option>Physics</option>
+<option>Chemistry</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">expand_more</span>
+</div>
+<div class="relative">
+<select class="appearance-none bg-surface-container-low border-none rounded-full px-5 py-2 pr-10 text-label-sm font-label-sm focus:ring-2 focus:ring-primary/20 cursor-pointer">
+<option>Difficulty</option>
+<option>Easy</option>
+<option>Moderate</option>
+<option>Hard</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">expand_more</span>
+</div>
+<div class="relative">
+<select class="appearance-none bg-surface-container-low border-none rounded-full px-5 py-2 pr-10 text-label-sm font-label-sm focus:ring-2 focus:ring-primary/20 cursor-pointer">
+<option>Test Status</option>
+<option>Not Started</option>
+<option>In Progress</option>
+<option>Completed</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">expand_more</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden lg:block">
+<input class="bg-surface-container-low border-none rounded-full px-5 py-2 pl-10 text-label-sm focus:ring-2 focus:ring-primary/20 w-64" placeholder="Search tests..." type="text"/>
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+</div>
+<button class="bg-primary text-white px-6 py-2 rounded-full font-button text-button shadow-lg shadow-primary/20 active:scale-95 transition-all">
+                    Daily Challenge
+                </button>
+</div>
+</header>
+<!-- Content Grid -->
+<div class="p-8 max-w-7xl mx-auto">
+<!-- Hero Stats / Banner -->
+<div class="mb-lg grid grid-cols-1 md:grid-cols-3 gap-md">
+<div class="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl p-6 text-white card-shadow relative overflow-hidden group">
+<div class="relative z-10">
+<p class="text-blue-100 text-sm font-medium mb-1">Average Score</p>
+<h4 class="text-3xl font-bold">542 / 720</h4>
+<div class="mt-4 flex items-center gap-2 text-xs bg-white/20 w-fit px-2 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+                            Top 12% in Batch
+                        </div>
+</div>
+<span class="material-symbols-outlined absolute -right-4 -bottom-4 text-white/10 text-8xl rotate-12 group-hover:scale-110 transition-transform">insights</span>
+</div>
+<div class="bg-white rounded-2xl p-6 card-shadow border border-slate-50">
+<p class="text-slate-500 text-sm font-medium mb-1">Tests Attempted</p>
+<h4 class="text-3xl font-bold text-on-surface">24</h4>
+<div class="mt-4 bg-slate-100 h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-3/4 rounded-full"></div>
+</div>
+<p class="mt-2 text-[10px] uppercase font-bold tracking-wider text-slate-400">Goal: 32 per month</p>
+</div>
+<div class="bg-white rounded-2xl p-6 card-shadow border border-slate-50">
+<p class="text-slate-500 text-sm font-medium mb-1">Next Live Test</p>
+<h4 class="text-3xl font-bold text-on-surface">14:20:05</h4>
+<div class="mt-4 flex items-center gap-2 text-xs text-primary font-semibold">
+<span class="material-symbols-outlined text-[14px]">timer</span>
+                        National Level NEET Mock 04
+                    </div>
+</div>
+</div>
+<!-- Main Test Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Test Card 1 -->
+<div class="bg-white rounded-2xl p-md card-shadow border border-slate-50 hover:border-primary/20 transition-all flex flex-col group">
+<div class="flex justify-between items-start mb-4">
+<span class="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-tight">Biology</span>
+<div class="flex gap-1">
+<span class="material-symbols-outlined text-amber-400 text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold text-slate-600">Premium</span>
+</div>
+</div>
+<h5 class="text-h3 font-h3 mb-2 group-hover:text-primary transition-colors">Full Syllabus Mock Test 08</h5>
+<p class="text-slate-500 text-sm line-clamp-2 mb-6">Comprehensive review covering Human Physiology, Genetics, and Ecology based on the latest NTA pattern.</p>
+<div class="mt-auto space-y-4">
+<div class="grid grid-cols-2 gap-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-400 text-lg">schedule</span>
+<span class="text-sm font-medium">180 Mins</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-400 text-lg">group</span>
+<span class="text-sm font-medium">12.4k Enrolled</span>
+</div>
+</div>
+<button class="w-full bg-primary-container text-on-primary-container py-3 rounded-xl font-button text-button hover:bg-primary transition-colors active:scale-95">
+                            Start Test
+                        </button>
+</div>
+</div>
+<!-- Test Card 2 -->
+<div class="bg-white rounded-2xl p-md card-shadow border border-slate-50 hover:border-primary/20 transition-all flex flex-col group">
+<div class="flex justify-between items-start mb-4">
+<span class="bg-emerald-50 text-emerald-600 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-tight">Chemistry</span>
+</div>
+<h5 class="text-h3 font-h3 mb-2 group-hover:text-primary transition-colors">Organic Chemistry Special</h5>
+<p class="text-slate-500 text-sm line-clamp-2 mb-6">Focus on Hydrocarbons, Haloalkanes, and Alcohols. Includes 45 highly probable questions.</p>
+<div class="mt-auto space-y-4">
+<div class="grid grid-cols-2 gap-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-400 text-lg">schedule</span>
+<span class="text-sm font-medium">60 Mins</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-400 text-lg">bar_chart</span>
+<span class="text-sm font-medium">Level: Hard</span>
+</div>
+</div>
+<button class="w-full bg-primary-container text-on-primary-container py-3 rounded-xl font-button text-button hover:bg-primary transition-colors active:scale-95">
+                            Start Test
+                        </button>
+</div>
+</div>
+<!-- Test Card 3 -->
+<div class="bg-white rounded-2xl p-md card-shadow border border-slate-50 hover:border-primary/20 transition-all flex flex-col group relative">
+<div class="absolute top-4 right-4 bg-primary/10 text-primary text-[10px] font-black px-2 py-0.5 rounded italic">RE-ATTEMPT</div>
+<div class="flex justify-between items-start mb-4">
+<span class="bg-purple-50 text-purple-600 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-tight">Physics</span>
+</div>
+<h5 class="text-h3 font-h3 mb-2 group-hover:text-primary transition-colors">Mechanics &amp; Kinematics</h5>
+<p class="text-slate-500 text-sm line-clamp-2 mb-6">Deep dive into Newton's laws and 2D motion with conceptual numerical analysis.</p>
+<div class="mt-auto space-y-4">
+<div class="grid grid-cols-2 gap-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-400 text-lg">schedule</span>
+<span class="text-sm font-medium">90 Mins</span>
+</div>
+<div class="flex items-center gap-2 text-primary font-bold">
+<span class="material-symbols-outlined text-lg">history</span>
+<span class="text-sm">2 Attempts</span>
+</div>
+</div>
+<button class="w-full border-2 border-primary text-primary py-3 rounded-xl font-button text-button hover:bg-primary hover:text-white transition-all active:scale-95">
+                            View Analysis
+                        </button>
+</div>
+</div>
+<!-- Test Card 4 -->
+<div class="bg-white rounded-2xl p-md card-shadow border border-slate-50 hover:border-primary/20 transition-all flex flex-col group">
+<div class="flex justify-between items-start mb-4">
+<span class="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-tight">Full Mock</span>
+</div>
+<h5 class="text-h3 font-h3 mb-2 group-hover:text-primary transition-colors">NTA Abhyas Mock 12</h5>
+<p class="text-slate-500 text-sm line-clamp-2 mb-6">Official practice test released by NTA for the upcoming 2025 examination session.</p>
+<div class="mt-auto space-y-4">
+<div class="grid grid-cols-2 gap-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-400 text-lg">schedule</span>
+<span class="text-sm font-medium">200 Mins</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-400 text-lg">verified</span>
+<span class="text-sm font-medium text-emerald-600">Official</span>
+</div>
+</div>
+<button class="w-full bg-primary-container text-on-primary-container py-3 rounded-xl font-button text-button hover:bg-primary transition-colors active:scale-95">
+                            Start Test
+                        </button>
+</div>
+</div>
+<!-- Test Card 5 -->
+<div class="bg-slate-50/50 border-2 border-dashed border-slate-200 rounded-2xl p-md flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-slate-300 text-5xl mb-4">lock</span>
+<h6 class="font-bold text-slate-500 mb-1">Previous Year Paper (2024)</h6>
+<p class="text-slate-400 text-xs px-8 mb-6">Unlock all previous year papers with the Pro Membership</p>
+<button class="text-primary text-sm font-bold hover:underline">Upgrade Now</button>
+</div>
+<!-- Test Card 6 -->
+<div class="bg-white rounded-2xl p-md card-shadow border border-slate-50 hover:border-primary/20 transition-all flex flex-col group">
+<div class="flex justify-between items-start mb-4">
+<span class="bg-orange-50 text-orange-600 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-tight">Botany</span>
+</div>
+<h5 class="text-h3 font-h3 mb-2 group-hover:text-primary transition-colors">Plant Diversity &amp; Reproduction</h5>
+<p class="text-slate-500 text-sm line-clamp-2 mb-6">High yield questions from Algae, Bryophytes, Pteridophytes and Gymnosperms.</p>
+<div class="mt-auto space-y-4">
+<div class="grid grid-cols-2 gap-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-400 text-lg">schedule</span>
+<span class="text-sm font-medium">45 Mins</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-400 text-lg">bolt</span>
+<span class="text-sm font-medium">Quick Quiz</span>
+</div>
+</div>
+<button class="w-full bg-primary-container text-on-primary-container py-3 rounded-xl font-button text-button hover:bg-primary transition-colors active:scale-95">
+                            Start Test
+                        </button>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-xl flex items-center justify-center gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-slate-200 text-slate-400 hover:bg-slate-50 transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-white font-bold">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-slate-200 text-slate-600 hover:bg-slate-50 font-medium">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-slate-200 text-slate-600 hover:bg-slate-50 font-medium">3</button>
+<span class="px-2 text-slate-400">...</span>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-slate-200 text-slate-600 hover:bg-slate-50 font-medium">12</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-slate-200 text-slate-400 hover:bg-slate-50 transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Footer Anchor -->
+<footer class="w-full border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 mt-xl">
+<div class="flex flex-col md:flex-row justify-between items-center py-10 px-8 max-w-7xl mx-auto gap-4">
+<div class="flex flex-col gap-1">
+<span class="text-blue-600 font-bold text-lg">EduAspirant</span>
+<p class="font-inter text-xs text-slate-500 dark:text-slate-400">© 2024 EduAspirant. Empowering India's future specialists.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-inter text-xs text-slate-500 hover:text-blue-500 hover:underline underline-offset-4 transition-opacity duration-300" href="#">About</a>
+<a class="font-inter text-xs text-slate-500 hover:text-blue-500 hover:underline underline-offset-4 transition-opacity duration-300" href="#">Privacy</a>
+<a class="font-inter text-xs text-slate-500 hover:text-blue-500 hover:underline underline-offset-4 transition-opacity duration-300" href="#">Terms</a>
+<a class="font-inter text-xs text-slate-500 hover:text-blue-500 hover:underline underline-offset-4 transition-opacity duration-300" href="#">Support</a>
+</div>
+</div>
+</footer>
+</main>
+<!-- Contextual FAB (Only for Home/Dashboard context, but included for complete UI feel) -->
+<!-- Suppressed on List pages per instruction, but shown if considering this a 'Primary Ecosystem' trigger -->
+<button class="fixed bottom-8 right-8 bg-secondary-container text-on-secondary-container h-14 w-14 rounded-full shadow-2xl flex items-center justify-center active:scale-90 transition-transform z-50">
+<span class="material-symbols-outlined text-2xl">question_answer</span>
+</button>
+</body></html>

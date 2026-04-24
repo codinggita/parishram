@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#3323cc",
+                        "surface-container-low": "#f3f3fe",
+                        "outline-variant": "#c3c6d7",
+                        "inverse-on-surface": "#f0f0fb",
+                        "inverse-surface": "#2e3039",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "on-primary-container": "#eeefff",
+                        "on-tertiary-fixed-variant": "#7d2d00",
+                        "tertiary": "#943700",
+                        "surface-container-highest": "#e1e2ed",
+                        "on-primary": "#ffffff",
+                        "primary": "#004ac6",
+                        "secondary-fixed-dim": "#c3c0ff",
+                        "on-tertiary-fixed": "#360f00",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "on-secondary": "#ffffff",
+                        "surface": "#faf8ff",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-container": "#2563eb",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#e7e7f3",
+                        "surface-variant": "#e1e2ed",
+                        "surface-dim": "#d9d9e5",
+                        "on-secondary-fixed": "#0f0069",
+                        "on-surface": "#191b23",
+                        "on-background": "#191b23",
+                        "secondary-container": "#645efb",
+                        "on-primary-fixed": "#00174b",
+                        "on-secondary-container": "#fffbff",
+                        "on-error-container": "#93000a",
+                        "background": "#faf8ff",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "tertiary-container": "#bc4800",
+                        "outline": "#737686",
+                        "inverse-primary": "#b4c5ff",
+                        "on-tertiary-container": "#ffede6",
+                        "surface-container": "#ededf9",
+                        "surface-tint": "#0053db",
+                        "surface-bright": "#faf8ff",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#dbe1ff",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed": "#e2dfff",
+                        "tertiary-fixed": "#ffdbcd",
+                        "secondary": "#4b41e1",
+                        "on-surface-variant": "#434655"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "lg": "48px",
+                        "xl": "80px",
+                        "gutter": "24px",
+                        "xs": "4px",
+                        "base": "8px",
+                        "sm": "12px",
+                        "md": "24px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "h2": ["Inter"],
+                        "h1": ["Inter"],
+                        "button": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "h3": ["Inter"]
+                    },
+                    "fontSize": {
+                        "h2": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "h1": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "button": ["16px", {"lineHeight": "1", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "label-sm": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400"}],
+                        "h3": ["24px", {"lineHeight": "1.4", "letterSpacing": "0em", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #faf8ff; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .ambient-shadow { box-shadow: 0 4px 20px rgba(37, 99, 235, 0.04); }
+        .elevation-2 { box-shadow: 0 12px 40px rgba(37, 99, 235, 0.08); }
+        .glass-panel { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.1); }
+    </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen flex items-center justify-center p-md">
+<!-- Main Container -->
+<main class="w-full max-w-container-max grid grid-cols-1 md:grid-cols-12 gap-gutter bg-surface-container-lowest rounded-[16px] overflow-hidden elevation-2">
+<!-- Left Side: Illustration Section -->
+<section class="hidden md:flex md:col-span-5 bg-primary-container relative overflow-hidden flex-col justify-between p-xl text-on-primary">
+<div class="z-10">
+<div class="flex items-center gap-xs mb-lg">
+<span class="material-symbols-outlined text-[32px]">school</span>
+<h1 class="font-h2 text-h2 tracking-tight">EduAspirant</h1>
+</div>
+<h2 class="font-h1 text-h1 mb-md">Master your future with precision.</h2>
+<p class="font-body-lg text-body-lg opacity-90 max-w-md">Join thousands of NEET and JEE aspirants in India's most focused learning ecosystem.</p>
+</div>
+<!-- Asymmetric Illustration Elements -->
+<div class="absolute bottom-0 right-0 w-full h-full pointer-events-none">
+<div class="absolute -bottom-20 -right-20 w-80 h-80 bg-white/10 rounded-full blur-3xl"></div>
+<div class="absolute top-1/2 -left-10 w-40 h-40 bg-secondary-container/30 rounded-full blur-2xl"></div>
+</div>
+<div class="z-10">
+<div class="flex items-center gap-sm bg-white/10 backdrop-blur-md p-md rounded-xl border border-white/20">
+<div class="w-12 h-12 rounded-full overflow-hidden border-2 border-white/40">
+<img alt="Student Success" data-alt="close-up portrait of a smiling young student wearing glasses in a sunlit library background, warm and inspiring mood" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIwB6XlADlbOjyGHkLFRpWsfmngsdXD6Y2LgWgGBVM0SLLHCwsGqnEG6Al4IB28ku5Nf5YlS4pjkAe_8c8_m0EBcMKw9_1L-31ZPJepjMFr4uawzdTGAGVV7TuTSItS8ZRIzhCNOyI0Z1e2B8P3Vg0WQINypmaKTA6vJiNCBM8Bl6CEOjwg_B7vt2-lvDZTUTr8IwxCM_EsHEahSGhx-94oBwCzSRpBhQhlGQgqc1CwFBQpbwEd9uwQZB5YY31AGlnL0_Sw4D3wQ"/>
+</div>
+<div>
+<p class="font-label-sm text-label-sm font-bold">Aditya Sharma</p>
+<p class="font-label-sm text-[12px] opacity-80">AIR 42, NEET 2024</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Right Side: Login/Signup Form -->
+<section class="col-span-1 md:col-span-7 flex flex-col justify-center px-md py-xl md:px-xl">
+<div class="max-w-md mx-auto w-full">
+<!-- Form Header -->
+<header class="mb-xl">
+<h3 class="font-h3 text-h3 text-on-surface mb-xs">Welcome back</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Please enter your details to access your dashboard.</p>
+</header>
+<!-- Social Login -->
+<div class="space-y-sm mb-lg">
+<button class="w-full flex items-center justify-center gap-sm bg-white border border-outline-variant py-sm px-md rounded-lg font-button text-button text-on-surface hover:bg-surface-container-low transition-all duration-200 active:scale-[0.98]">
+<svg class="w-5 h-5" viewbox="0 0 24 24">
+<path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
+<path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path>
+<path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"></path>
+<path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 12-4.53z" fill="#EA4335"></path>
+</svg>
+                        Continue with Google
+                    </button>
+</div>
+<div class="relative flex items-center justify-center mb-lg">
+<div class="flex-grow border-t border-outline-variant"></div>
+<span class="px-sm font-label-sm text-label-sm text-outline bg-surface-container-lowest">OR</span>
+<div class="flex-grow border-t border-outline-variant"></div>
+</div>
+<!-- Credentials Form -->
+<form class="space-y-md">
+<div class="space-y-xs">
+<label class="block font-label-sm text-label-sm text-on-surface" for="email">Email Address</label>
+<input class="w-full bg-surface-container-low border-transparent rounded-lg py-sm px-md font-body-md text-on-surface placeholder:text-outline focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-200 outline-none" id="email" placeholder="name@eduaspirant.com" type="email"/>
+</div>
+<div class="space-y-xs">
+<div class="flex justify-between items-center">
+<label class="block font-label-sm text-label-sm text-on-surface" for="password">Password</label>
+<a class="font-label-sm text-label-sm text-primary hover:underline" href="#">Forgot?</a>
+</div>
+<div class="relative">
+<input class="w-full bg-surface-container-low border-transparent rounded-lg py-sm px-md font-body-md text-on-surface placeholder:text-outline focus:bg-white focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-200 outline-none" id="password" placeholder="••••••••" type="password"/>
+<button class="absolute right-md top-1/2 -translate-y-1/2 text-outline hover:text-on-surface-variant" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-sm">
+<input class="w-4 h-4 rounded border-outline-variant text-primary focus:ring-primary" id="remember" type="checkbox"/>
+<label class="font-label-sm text-label-sm text-on-surface-variant" for="remember">Keep me logged in</label>
+</div>
+<button class="w-full bg-primary-container text-on-primary py-sm rounded-lg font-button text-button hover:bg-primary-container/90 active:scale-[0.98] transition-all duration-200 shadow-md" type="submit">
+                        Login to Dashboard
+                    </button>
+</form>
+<!-- Footer Links -->
+<footer class="mt-xl text-center">
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Don't have an account? 
+                        <a class="text-primary font-semibold hover:underline" href="#">Sign up for free</a>
+</p>
+<div class="mt-lg flex justify-center gap-md">
+<a class="font-label-sm text-[12px] text-outline hover:text-on-surface-variant transition-colors" href="#">Privacy Policy</a>
+<a class="font-label-sm text-[12px] text-outline hover:text-on-surface-variant transition-colors" href="#">Terms of Service</a>
+</div>
+</footer>
+</div>
+</section>
+</main>
+<!-- Support Floating Bubble (Contextual) -->
+<div class="fixed bottom-md right-md">
+<button class="w-14 h-14 rounded-full bg-white text-primary flex items-center justify-center elevation-2 glass-panel border border-primary/10 hover:bg-primary hover:text-white transition-all duration-300">
+<span class="material-symbols-outlined">support_agent</span>
+</button>
+</div>
+</body></html>
