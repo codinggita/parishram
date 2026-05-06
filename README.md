@@ -4,45 +4,35 @@
   # 🎓 Parishram - Premium EdTech Platform
   
   **A scalable, modern, and comprehensive e-learning management system.**
-
-  [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
-  [![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
-  [![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
-  [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-  [![Redux](https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white)](https://redux.js.org/)
-
-  [View Live Demo](#) • [Report Bug](#) • [Request Feature](#)
 </div>
 
 ---
 
-## 📖 Table of Contents
-1. [About The Project](#about-the-project)
-2. [Key Features](#key-features)
-3. [Tech Stack & Architecture](#tech-stack--architecture)
-4. [Folder Structure](#folder-structure)
-5. [Getting Started (Installation)](#getting-started)
-6. [Environment Variables](#environment-variables)
-7. [Demo Login Credentials](#demo-credentials)
-8. [API Documentation Overview](#api-documentation-overview)
+## 🔗 Important Links
+🌐 **Live Project:** https://my-parishram.vercel.app
+⚙️ **Backend API:** https://parishram-backend.onrender.com
+📄 **Postman Documentation:** https://documenter.getpostman.com/view/50839268/2sBXqKoKyo
+🎨 **Figma Design Link:** https://www.figma.com/design/roQqepzpF2oPUxn0LrB5jT/Untitled?node-id=0-1&m=dev&t=JUIiCBA8okF5WMub-1
+🎥 **YouTube Demo Video Link:** https://youtu.be/tRxXFXJzsZw
+💻 **GitHub Repository:** https://github.com/Purnansh29/parishram
 
 ---
 
-## 🚀 About The Project
+## 📝 Project Description
+Parishram is a full-stack educational technology platform designed to bridge the gap between traditional coaching and modern e-learning. It provides a robust architecture capable of handling role-based routing (Admin, Teacher, Student), automated online examinations (NTA-style mock tests), and detailed student performance analytics.
 
-Parishram is a full-stack educational technology platform designed to bridge the gap between traditional coaching and modern e-learning. It provides a robust architecture capable of handling role-based routing (Admin, Teacher, Student), automated online examinations (NTA-style mock tests), and detailed student performance analytics. 
+## 🛑 Problem Statement
+Traditional coaching institutes and standalone online courses often lack a unified platform that seamlessly integrates course delivery, rigorous assessment (like mock tests mimicking real exams such as JEE/NEET), and detailed performance tracking. Students struggle to track their progress accurately, while teachers and admins face difficulties in managing courses, tests, and user data efficiently in one place.
 
-The UI/UX is heavily inspired by modern SaaS platforms, utilizing a **glassmorphism design language**, smooth micro-interactions, and a dedicated mobile-first bottom navigation system.
-
----
+## 💡 Solution Overview
+Parishram solves this by offering a centralized, role-based EdTech platform. It empowers **Students** with a structured learning path and advanced performance analytics. It equips **Teachers** with intuitive tools to create courses and dynamic tests. It provides **Admins** with complete oversight of the platform's users and content. The platform uses a modern tech stack to ensure high performance, security, and a premium user experience across all devices.
 
 ## ✨ Key Features
-
 ### 👨‍🎓 For Students
 - **Course Library:** Browse, enroll, and consume course materials (Video lectures and PDF notes).
 - **Mock Test Engine:** Time-bound, strict-format online exams mimicking real competitive exams (JEE/NEET).
 - **Performance Analytics:** Visual representations (via Recharts) of test history, score progression, and accuracy.
-- **Secure Profile:** OTP-based password resets and secure profile management.
+- **Secure Profile:** Profile management with secure authentication.
 
 ### 👨‍🏫 For Teachers
 - **Course Management:** Create and structure courses with nested modules.
@@ -50,40 +40,34 @@ The UI/UX is heavily inspired by modern SaaS platforms, utilizing a **glassmorph
 - **Student Monitoring:** Track the performance of enrolled students.
 
 ### 🛡️ For Admins
-- **User Management:** Oversee all platform users, ban/unban accounts, and assign roles.
-- **Platform Analytics:** Global view of platform revenue, total enrollments, and active courses.
+- **User Management:** Oversee all platform users, manage accounts, and assign roles.
+- **Platform Analytics:** Global view of platform statistics.
 
 ---
 
-## 🛠️ Tech Stack & Architecture
-
-Parishram follows a strict **MERN (MongoDB, Express, React, Node.js)** stack architecture.
-
-**Frontend Layer:**
-- **React.js (Vite):** High-performance UI rendering.
-- **Redux Toolkit:** Centralized state management for Auth, Courses, and Tests.
-- **Tailwind CSS:** Utility-first CSS for rapid, responsive UI development.
-- **Recharts:** For rendering complex student performance data visually.
-
-**Backend Layer:**
-- **Node.js & Express.js:** RESTful API creation.
-- **MongoDB & Mongoose:** NoSQL database modeling with relationships (User -> Course -> Test -> Attempt).
-- **JWT & Bcrypt.js:** Stateless, secure authentication and password hashing.
+## 💻 Tech Stack
+- **Frontend:** React.js, Vite, Tailwind CSS, Axios
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB, Mongoose
+- **Authentication:** JWT
+- **Deployment:** Vercel, Render
+- **Design:** Figma
+- **API Testing:** Postman
+- **SEO:** React Helmet, robots.txt, sitemap.xml
 
 ---
 
-## 📂 Folder Structure
-
+## 📂 Proper Folder Structure
 ```text
 parishram/
-├── backend/                  # Express server
+├── backend/                  # Node.js/Express server
 │   ├── controllers/          # Request handlers (auth, user, course, test)
 │   ├── middleware/           # JWT verification, Role authorization
 │   ├── models/               # Mongoose schemas
 │   ├── routes/               # API endpoint definitions
 │   └── server.js             # Entry point
 │
-└── frontend/                 # React application
+└── frontend/                 # React application (Vite)
     ├── src/
     │   ├── components/       # Reusable UI components (Sidebar, Navbar, Modals)
     │   ├── features/         # Redux slices (authSlice, courseSlice)
@@ -94,84 +78,26 @@ parishram/
 
 ---
 
-## 🚦 Getting Started
+## 📸 Project Images / Screenshots
+*(Add your actual project screenshots here. You can drag and drop images directly into GitHub to replace these placeholders)*
 
-Follow these instructions to set up the project locally on your machine.
-
-### Prerequisites
-- Node.js (v16.0.0 or higher)
-- MongoDB (Local instance or MongoDB Atlas cluster)
-- Git
-
-### Installation
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/Purnansh29/parishram.git
-   cd parishram
-   ```
-
-2. **Setup Backend:**
-   ```bash
-   cd backend
-   npm install
-   ```
-   *Create a `.env` file (refer to the Environment Variables section below).*
-   ```bash
-   npm run dev    # Runs server on port 5000 using nodemon
-   ```
-
-3. **Setup Frontend:**
-   ```bash
-   cd ../frontend
-   npm install
-   npm run dev    # Runs React app on port 5173
-   ```
+<div align="center">
+  <img src="https://via.placeholder.com/800x400?text=Homepage+Screenshot" alt="Homepage" width="80%" />
+  <br/>
+  <br/>
+  <img src="https://via.placeholder.com/800x400?text=Dashboard+Screenshot" alt="Dashboard" width="80%" />
+  <br/>
+  <br/>
+  <img src="https://via.placeholder.com/800x400?text=Test+Engine+Screenshot" alt="Test Engine" width="80%" />
+</div>
 
 ---
 
-## 🔐 Environment Variables
-
-Create a `.env` file in the `backend/` directory with the following keys:
-
-| Variable | Description | Example |
-| :--- | :--- | :--- |
-| `PORT` | Backend server port | `5000` |
-| `MONGO_URI` | MongoDB connection string | `mongodb://localhost:27017/parishram` |
-| `JWT_SECRET` | Secret key for signing tokens | `your_super_secret_jwt_key_here` |
-| `NODE_ENV` | Environment state | `development` |
-
----
-
-## 🧪 Demo Credentials
-
-To evaluate the platform without registering, you can use the following pre-configured accounts (if you have run the database seeder):
-
-| Role | Email | Password | Access Level |
-| :--- | :--- | :--- | :--- |
-| **Admin** | `admin@gmail.com` | `admin123` | Full platform control, User management |
-| **Teacher** | `teacher@gmail.com` | `admin123` | Course & Test creation, Content management |
-| **Student** | `student@gmail.com` | `admin123` | Course consumption, Taking tests, Analytics |
-
-*(To seed your database with these accounts, run `npm run seed` inside the backend directory, assuming you have a seeder script set up).*
-
----
-
-## 🌐 API Documentation Overview
-
-The backend exposes a RESTful API. All protected routes require a valid `Bearer Token` in the Authorization header.
-
-- **Auth:** `POST /api/auth/register`, `POST /api/auth/login`, `POST /api/auth/forgot-password`
-- **Users:** `GET /api/users/profile`, `PUT /api/users/change-password`
-- **Courses:** `GET /api/courses`, `POST /api/courses` (Teacher only), `POST /api/courses/:id/enroll`
-- **Tests:** `GET /api/tests`, `POST /api/tests/:id/submit`, `GET /api/tests/attempts`
-
----
-
-## 📱 Responsiveness & Accessibility
-The frontend is heavily optimized for mobile devices. It features CSS media queries that transform the desktop sidebar into an **iOS-style bottom navigation bar** on small screens, ensuring the core learning experience is never compromised on smartphones.
-
----
+## 📬 Contact Me
+Feel free to reach out to me:
+- **LinkedIn:** [Purnansh Patel](https://www.linkedin.com/in/purnansh-patel-3b399a397/)
+- **GitHub:** [Purnansh29](https://github.com/Purnansh29)
+- **LeetCode:** [5Xm4vtaScz](https://leetcode.com/u/5Xm4vtaScz/)
 
 <div align="center">
   <b>Built with ❤️ by Purnansh Patel</b>
